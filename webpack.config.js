@@ -36,16 +36,17 @@ module.exports = {
         new HtmlWebPackPlugin({
             title: 'Mi Webpack App',
             //filename: 'index.html',
-            template: './src/index.html'
+            template: './src/index.html',
+            favicon: './src/assets/favicon.ico',
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             ignoreOrder: false
         }),
-        /*new CopyPlugin({
+        new CopyPlugin({
             patterns: [
                 {from: 'src/assets', to: 'assets'}
             ]
-        })*/
+        })
     ]
 };
