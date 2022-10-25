@@ -6,7 +6,7 @@
     padding: 2em 1.6em;
   }
   header .logo {
-    height: 2em;
+    height: 2.2em;
   }
   header .u-pull-left li, header .u-pull-left div {
     margin-left: 1em;
@@ -14,13 +14,13 @@
 }
 @media (min-width: 480px) {
   .searchBar input {
-    width: 15em;
+    width: 20em;
   }
   header {
     padding: 2em 2.5em;
   }
   header .logo {
-    height: 2.3em;
+    height: 2.5em;
   }
   header li.u-pull-left, header div.u-pull-left {
     margin-left: 2em;
@@ -31,12 +31,23 @@ header {
   font-size: 0.8em;
   line-height: 0;
 }
+header .searchBar {
+  position: relative;
+}
+header .searchBar i { /* Magnifying glass */
+  font-size: 1.5em;
+  color: #bab7b1;
+  transition: 0.3s;
+}
+header .searchBar i:hover {
+  color: #111010;
+}
 header .searchBar button {
   background: transparent;
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 0.4em;
+  top: 0.45em;
   right: 0.9em;
   padding: 0;
   font-size: 100%;
@@ -44,54 +55,14 @@ header .searchBar button {
   height: auto;
   line-height: 0;
 }
-
-@media (max-width: 480px) {
-  .searchBar input {
-    width: 12em;
-  }
-  header {
-    padding: 2em 1.6em;
-  }
-  header .logo {
-    height: 2em;
-  }
-  header .u-pull-left li, header .u-pull-left div {
-    margin-left: 1em;
-  }
-}
-@media (min-width: 480px) {
-  .searchBar input {
-    width: 15em;
-  }
-  header {
-    padding: 2em 2.5em;
-  }
-  header .logo {
-    height: 2.3em;
-  }
-  header li.u-pull-left, header div.u-pull-left {
-    margin-left: 2em;
-  }
-}
-.searchBar {
-  position: relative;
-}
-.searchBar i { /* Magnifying glass */
-  font-size: 1.3em;
-  color: #bab7b1;
-  transition: 0.3s;
-}
-.searchBar i:hover {
-  color: #111010;
-}
-.searchBar input {
+header .searchBar input {
   height: 2.5em;
   padding: 0.1em 1.2em 0.1em 1.2em;
   border-radius: 34px;
   background-color: white;
   border: none;
 }
-.searchBar input:focus {
+header .searchBar input:focus {
   border: none;
   outline: none;
   box-shadow: 0 0 10px 0px white;
