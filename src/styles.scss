@@ -2,6 +2,15 @@
         './header/header.css';
 
 
+
+
+@font-face {
+    font-family: primaryFont;
+    src: url(./assets/fonts/GOTHIC.TTF);
+}
+
+
+
 .s-one.column,
 .s-one.columns                    { width: 4.66666666667%; }
 .s-two.columns                    { width: 13.3333333333%; }
@@ -37,15 +46,46 @@
     .b-twelve.columns                 { width: 100%; margin-left: 0; }
 }
 
-
-body {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+html, body {
+    height: 100%;
 }
 
-body * {
+.mainContainer {   
+    flex: 1 0 auto; 
+}
+
+footer {
+    flex-shrink: 0;    
+}
+
+body {
+    font-family: primaryFont;
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    & * {
+        margin: 0;
+    }
+    &.theme.light{
+        $principalClaro: #ffffff;
+        $secundarioClaro: #f0eee7;
+        $terciarioClaro: #d8d5cc;
+        $cuaterciarioClaro: #bab7b1;
+    
+        background-color: $principalClaro;     
+    }
+    &.theme.dark{
+        $principalOscuro: #e7e4dd;
+        $secundarioOscuro: #686b6d;
+        $terciarioOscuro: #242424;
+        $cuaterciarioOscuro: #111010;
+    
+    
+        background-color: $terciarioOscuro; 
+    }
 }
 
 ul {
     list-style: none;  
 }
+
