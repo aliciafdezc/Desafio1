@@ -1,5 +1,6 @@
 @import './css-skeleton/normalize.css';
 @import './css-skeleton/skeleton.css';
+@import './footer/footer.css';
 .container {
   position: relative;
   width: 100%;
