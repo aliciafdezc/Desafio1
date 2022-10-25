@@ -1,3 +1,22 @@
+header {
+  background-color: #111010;
+  font-size: 0.8em;
+  line-height: 0;
+}
+header .searchBar button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.4em;
+  right: 0.9em;
+  padding: 0;
+  font-size: 100%;
+  letter-spacing: 0;
+  height: auto;
+  line-height: 0;
+}
+
 @media (max-width: 480px) {
   .searchBar input {
     width: 12em;
@@ -26,25 +45,6 @@
     margin-left: 2em;
   }
 }
-header {
-  background-color: #111010;
-  font-size: 0.8em;
-  line-height: 0;
-}
-header .searchBar button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 0.4em;
-  right: 0.9em;
-  padding: 0;
-  font-size: 100%;
-  letter-spacing: 0;
-  height: auto;
-  line-height: 0;
-}
-
 .searchBar {
   position: relative;
 }
