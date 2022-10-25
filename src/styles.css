@@ -2,6 +2,7 @@
 @import './css-skeleton/skeleton.css';
 @import './footer/footer.css';
 @import './header/header.css';
+@import './projectMenu/project.css';
 @font-face {
   font-family: primaryFont;
   src: url(./assets/fonts/GOTHIC.TTF);
@@ -128,6 +129,7 @@ body {
 }
 body * {
   margin: 0;
+  box-sizing: border-box;
 }
 body.theme.light {
   background-color: #ffffff;
@@ -138,4 +140,9 @@ body.theme.dark {
 
 ul {
   list-style: none;
+}
+
+.icons i {
+  color: white;
+  transition: 0.3s;
 }/*# sourceMappingURL=styles.css.map */
