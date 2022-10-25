@@ -6,7 +6,7 @@
     padding: 2em 1.6em;
   }
   header .logo {
-    height: 2em;
+    height: 2.2em;
   }
   header .u-pull-left li, header .u-pull-left div {
     margin-left: 1em;
@@ -14,13 +14,13 @@
 }
 @media (min-width: 480px) {
   .searchBar input {
-    width: 15em;
+    width: 20em;
   }
   header {
     padding: 2em 2.5em;
   }
   header .logo {
-    height: 2.3em;
+    height: 2.5em;
   }
   header li.u-pull-left, header div.u-pull-left {
     margin-left: 2em;
@@ -57,7 +57,7 @@ header .searchBar button {
   color: #111010;
 }
 .searchBar input {
-  height: 2.2em;
+  height: 2.5em;
   padding: 0.1em 1.2em 0.1em 1.2em;
   border-radius: 34px;
   background-color: white;
@@ -76,7 +76,7 @@ li.settings {
 li.icons i {
   color: white;
   transition: 0.3s;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 .settings:hover .settingsMenu, .settings:active .settingsMenu {
