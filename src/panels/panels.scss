@@ -1,0 +1,62 @@
+
+$primaryLight: #ffffff;
+$secondaryLight: #f0eee7;
+$tertiaryLight: #d8d5cc;
+$accentLight: #bab7b1;
+
+$primaryDark: #e7e4dd;
+$secondaryDark: #686b6d;
+$tertiaryDark: #242424;
+$accentDark: #111010;
+
+.panelsContainer.row {
+  padding : 7rem 7rem;
+}
+
+.panel {
+  background-color: $primaryDark;
+  min-height: 10%;
+  max-height: 100%;
+  border-radius: 20px;
+  & div div {
+    padding: 3rem 4rem;
+  }
+  & .panelTasks {
+    overflow-y: scroll;
+  }
+  & .panelTitle, .panelBottom {
+    background-color: $tertiaryDark;
+    text-align: center;
+    color: white;
+  }
+  & .panelTitle {
+    border-radius: 20px 20px 0 0;
+  }
+  & .panelBottom {
+    border-radius: 0 0 20px 20px;
+    & span {
+      margin-right: 1rem;
+    }
+    & i {
+      font-size: 2rem;
+    }
+  }
+} 
+
+
+
+
+/* Scrollbar  chrome */
+/* .panel::-webkit-scrollbar {
+  width: 12px;
+}
+
+.panel::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+.panel::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+} */
