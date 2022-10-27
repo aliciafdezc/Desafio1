@@ -41,7 +41,54 @@
             </div>
         </div>
     </div>
-    
+    <div class="tasksModal">
+        <div class="modalBackground">
+            <div class="modalContainer">
+                <div class="taskName row">
+                    <input type="text" placeholder="New Task" class="name columns b-eleven s-eleven"></input>
+                    <div class="close column b-one s-one"><i class="fa fa-times-circle"></i></div>
+                </div>
+
+                <div class="content">
+                    <!-- <div class="img">
+                        <label class="btn" for="img" class="u-pull-left">Select Image</label>
+                        <input type="file" id="img" name="img" accept="image/*" >
+                    </div> -->
+                    <div class="label row">
+                        <p class="columns b-twelve s-twelve">Label</p>
+                        <div class="row">
+                            <div class="name columns b-six s-six"><input type="text" placeholder="New label"></input></div>
+                            <div class="color columns b-three s-three"><input type="color" value="#19e4aa"></input></div>
+                            <button type="button" class="add columns b-three s-three""><i class="fa fa-plus-circle"></i>Add</button>
+                        </div>
+                    </div>
+
+                    <div class="checklist row">
+                        <p class="subtasks columns b-twelve s-twelve">Subtasks</p>
+                        <div class="row">
+                            <div class="name columns b-nine s-nine"><input type="text" placeholder="New subtask"></input></div>
+                            <button type="button" class="add columns b-three s-three u-pull-right"><i class="fa fa-plus-circle"></i>Add</button>
+                        </div>
+                    </div>
+                    
+                    <div class="priority row">
+                        <p class="priority u-pull-left">Priority</p>
+                        <select class="u-pull-right">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="add">
+                    <span><i class="fa fa-plus-circle"></i></span>
+                    <span class="text">Add task</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="row">
         <span class="columns b-six s-nine copyright">Copyright&copy; 2022-2023 | Alicia Fernández Cambronero</span>
         <div class="columns b-six s-three">

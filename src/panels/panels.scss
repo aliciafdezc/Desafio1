@@ -18,27 +18,31 @@ $accentDark: #111010;
   min-height: 10%;
   max-height: 100%;
   border-radius: 20px;
-  & div div {
+  & div .columns {
+    margin-left: 0;
+  }
+  & .tasks,  & .title, & .addTask{
     padding: 3rem 4rem;
   }
-  & .panelTasks {
+  & .tasks {
     overflow-y: scroll;
   }
-  & .panelTitle, .panelBottom {
+  & .title, & .addTask {
     background-color: $tertiaryDark;
     text-align: center;
     color: white;
   }
-  & .panelTitle {
+  & .title {
     border-radius: 20px 20px 0 0;
   }
-  & .panelBottom {
+  & .addTask {
     border-radius: 0 0 20px 20px;
     & span {
-      margin-right: 1rem;
+      cursor: pointer;
     }
     & i {
       font-size: 2rem;
+      margin-right: 1rem;
     }
   }
 } 

@@ -3,6 +3,7 @@
 @import './footer/footer.css';
 @import './header/header.css';
 @import './panels/panels.css';
+@import './panels/tasksModal/tasksModal.css';
 @font-face {
   font-family: primaryFont;
   src: url(./assets/fonts/GOTHIC.TTF);
@@ -129,6 +130,7 @@ body {
 }
 body * {
   margin: 0;
+  box-sizing: border-box;
 }
 body.theme.light {
   background-color: #ffffff;
@@ -139,4 +141,8 @@ body.theme.dark {
 
 ul {
   list-style: none;
+}
+
+.priority select option {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }/*# sourceMappingURL=styles.css.map */

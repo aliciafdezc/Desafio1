@@ -1,0 +1,158 @@
+@media (max-width: 480px) {
+    .modalContainer {
+        width: 90vw;
+        left: 5%;
+
+    }
+}
+
+ @media (min-width: 480px) {
+    .modalContainer {
+        width: 60vw;
+        left: 20%;
+    }
+}
+
+@media (min-width: 735px) {
+    .modalContainer {
+        width: 40vw;
+        left: 30%;
+    }
+}
+
+.tasksModal.visible { display: block; }
+
+.tasksModal {
+    display: none;
+
+    & .modalBackground {
+        background-color: rgba(0, 0, 0,.5);
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+
+    & .modalContainer {
+        height: 90vh;
+        z-index: 10;
+        background-color: white;
+        border-radius: 30px;
+        position: absolute;
+        top: 5%;
+
+        & i, & .add .text{ cursor: pointer; }
+
+        & .taskName, & > .add {
+            text-align: center;
+            background-color: #242424;
+            padding: 2rem 3rem;
+            color: white;
+            height: 10%;
+        }
+
+        & .taskName {
+            border-radius: 20px 20px 0 0;
+            & .name { 
+                font-size: 1.6rem;
+                background: transparent;
+                border: none; 
+            }
+            & .close { font-size: 2rem; }
+        }
+    
+        & .content {
+            padding: 2rem 3rem;
+            background-color: white;
+            color: #242424;
+            overflow-y: scroll; 
+            height: 80%;
+
+            & button {
+                padding: 0;
+                color:white;
+                background-color: #242424;
+                text-align: center;
+                border-radius: 30px;
+                border: none;
+                &:hover {
+                    background-color: #111010;
+                }
+                & i {
+                    margin-right: 1rem;
+                }
+            }
+            & input {
+                width: 100%;
+                height: 3.5rem;
+                margin-left: 0;
+            }
+            
+            & > div {
+                & p {
+                    margin-bottom: 1rem;
+                }
+                padding: 2rem 3rem;   
+            }
+            
+            & .label > div {
+                margin-left: 0;
+            
+            }
+
+           /*  & .img input {
+                font-weight: normal;
+                background-color: #242424;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 34px;
+                text-align: center;
+            } */
+            & .progressBarContainer {
+                border-radius: 30px;
+                display: block;
+                background-color: #e7e4dd;
+            }
+    
+            & .progressBar{
+                display: block;
+                height: 1em;
+                width: 0%;
+                border-radius: 30px;
+                background-color: #242424;    
+            }
+            
+            & p {
+                font-size: 1.9rem;
+            }
+
+            & .priority select {
+                background-color: #242424;   
+                color: white; 
+                border: none;
+                & option {
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+
+        & > .add { 
+            width: 100%;
+            position: inherit;
+            bottom: 0;
+            border-radius: 0 0 20px 20px; 
+            & .text {
+                font-size: 1.6rem;
+            }
+            & i {
+                font-size: 2rem;
+                margin-right: 1rem;
+            }
+            
+        }
+    }
+  
+}
+

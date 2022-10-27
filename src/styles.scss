@@ -1,5 +1,5 @@
 @import './css-skeleton/normalize.css', './css-skeleton/skeleton.css', './footer/footer.css', 
-        './header/header.css', './panels/panels.css';
+        './header/header.css', './panels/panels.css', './panels/tasksModal/tasksModal.css'; 
 
 
 
@@ -65,6 +65,7 @@ body {
     margin: 0;
     & * {
         margin: 0;
+        box-sizing: border-box;
     }
     &.theme.light{
         $principalClaro: #ffffff;
@@ -89,3 +90,6 @@ ul {
     list-style: none;  
 }
 
+.priority  select option {
+    font-family:  Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
