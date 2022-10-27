@@ -42,9 +42,9 @@
         position: absolute;
         top: 5%;
 
-        & i, & .add .text{ cursor: pointer; }
+        & i, .addTask, select, .upload { cursor: pointer; }
 
-        & .taskName, & > .add {
+        & .taskName, & .addTask {
             text-align: center;
             background-color: #242424;
             padding: 2rem 3rem;
@@ -61,7 +61,7 @@
             }
             & .close { font-size: 2rem; }
         }
-    
+       
         & .content {
             padding: 2rem 3rem;
             background-color: white;
@@ -69,6 +69,26 @@
             overflow-y: scroll; 
             height: 80%;
 
+            & button, & label {
+                font-weight: normal;
+            }
+
+            & .img {
+                & input {
+                    display: none;
+                }
+                & label {
+                    color:white;
+                    background-color: #242424;
+                    border-radius: 30px;
+                    padding: 1rem 2rem;
+                    width: 15rem;
+                    &:hover {
+                        background-color: #111010;
+                    }
+                    & i { margin-right: 1rem; }
+                }
+            }
             & button {
                 padding: 0;
                 color:white;
@@ -76,6 +96,7 @@
                 text-align: center;
                 border-radius: 30px;
                 border: none;
+                text-transform: none;
                 &:hover {
                     background-color: #111010;
                 }
@@ -93,7 +114,7 @@
                 & p {
                     margin-bottom: 1rem;
                 }
-                padding: 2rem 3rem;   
+                padding: 2.5rem 3rem;   
             }
             
             & .label > div {
@@ -101,14 +122,10 @@
             
             }
 
-           /*  & .img input {
-                font-weight: normal;
-                background-color: #242424;
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 34px;
-                text-align: center;
-            } */
+            & .priority p {
+                margin-right: 2rem;
+            }
+
             & .progressBarContainer {
                 border-radius: 30px;
                 display: block;
@@ -138,7 +155,8 @@
             }
         }
 
-        & > .add { 
+        & .addTask { 
+            cursor: pointer;
             width: 100%;
             position: inherit;
             bottom: 0;
@@ -149,6 +167,9 @@
             & i {
                 font-size: 2rem;
                 margin-right: 1rem;
+            }
+            &:hover {
+                background-color: #111010;
             }
             
         }

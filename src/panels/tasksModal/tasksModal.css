@@ -39,10 +39,10 @@
   position: absolute;
   top: 5%;
 }
-.tasksModal .modalContainer i, .tasksModal .modalContainer .add .text {
+.tasksModal .modalContainer i, .tasksModal .modalContainer .addTask, .tasksModal .modalContainer select, .tasksModal .modalContainer .upload {
   cursor: pointer;
 }
-.tasksModal .modalContainer .taskName, .tasksModal .modalContainer > .add {
+.tasksModal .modalContainer .taskName, .tasksModal .modalContainer .addTask {
   text-align: center;
   background-color: #242424;
   padding: 2rem 3rem;
@@ -66,14 +66,25 @@
   color: #242424;
   overflow-y: scroll;
   height: 80%;
-  /*  & .img input {
-       font-weight: normal;
-       background-color: #242424;
-       color: white;
-       padding: 1rem 2rem;
-       border-radius: 34px;
-       text-align: center;
-   } */
+}
+.tasksModal .modalContainer .content button, .tasksModal .modalContainer .content label {
+  font-weight: normal;
+}
+.tasksModal .modalContainer .content .img input {
+  display: none;
+}
+.tasksModal .modalContainer .content .img label {
+  color: white;
+  background-color: #242424;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  width: 15rem;
+}
+.tasksModal .modalContainer .content .img label:hover {
+  background-color: #111010;
+}
+.tasksModal .modalContainer .content .img label i {
+  margin-right: 1rem;
 }
 .tasksModal .modalContainer .content button {
   padding: 0;
@@ -82,6 +93,7 @@
   text-align: center;
   border-radius: 30px;
   border: none;
+  text-transform: none;
 }
 .tasksModal .modalContainer .content button:hover {
   background-color: #111010;
@@ -95,13 +107,16 @@
   margin-left: 0;
 }
 .tasksModal .modalContainer .content > div {
-  padding: 2rem 3rem;
+  padding: 2.5rem 3rem;
 }
 .tasksModal .modalContainer .content > div p {
   margin-bottom: 1rem;
 }
 .tasksModal .modalContainer .content .label > div {
   margin-left: 0;
+}
+.tasksModal .modalContainer .content .priority p {
+  margin-right: 2rem;
 }
 .tasksModal .modalContainer .content .progressBarContainer {
   border-radius: 30px;
@@ -127,16 +142,20 @@
   border: none;
   outline: none;
 }
-.tasksModal .modalContainer > .add {
+.tasksModal .modalContainer .addTask {
+  cursor: pointer;
   width: 100%;
   position: inherit;
   bottom: 0;
   border-radius: 0 0 20px 20px;
 }
-.tasksModal .modalContainer > .add .text {
+.tasksModal .modalContainer .addTask .text {
   font-size: 1.6rem;
 }
-.tasksModal .modalContainer > .add i {
+.tasksModal .modalContainer .addTask i {
   font-size: 2rem;
   margin-right: 1rem;
+}
+.tasksModal .modalContainer .addTask:hover {
+  background-color: #111010;
 }/*# sourceMappingURL=tasksModal.css.map */

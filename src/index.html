@@ -50,10 +50,13 @@
                 </div>
 
                 <div class="content">
-                    <!-- <div class="img">
-                        <label class="btn" for="img" class="u-pull-left">Select Image</label>
-                        <input type="file" id="img" name="img" accept="image/*" >
-                    </div> -->
+                    <div class="img row">
+                        <p class="columns b-nine s-nine">Select Image</p>
+                        <div class="columns b-three s-three">
+                            <label class="upload u-pull-right" for="img"><i class="fa fa-plus-circle"></i>Upload file</label>
+                            <input type="file" id="img" name="img" accept="image/*" >
+                        </div>
+                    </div>
                     <div class="label row">
                         <p class="columns b-twelve s-twelve">Label</p>
                         <div class="row">
@@ -61,6 +64,7 @@
                             <div class="color columns b-three s-three"><input type="color" value="#19e4aa"></input></div>
                             <button type="button" class="add columns b-three s-three""><i class="fa fa-plus-circle"></i>Add</button>
                         </div>
+                        <div class="container"></div>
                     </div>
 
                     <div class="checklist row">
@@ -69,11 +73,12 @@
                             <div class="name columns b-nine s-nine"><input type="text" placeholder="New subtask"></input></div>
                             <button type="button" class="add columns b-three s-three u-pull-right"><i class="fa fa-plus-circle"></i>Add</button>
                         </div>
+                        <div class="container"></div>
                     </div>
                     
-                    <div class="priority row">
+                    <div class="priority">
                         <p class="priority u-pull-left">Priority</p>
-                        <select class="u-pull-right">
+                        <select>
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
@@ -81,7 +86,7 @@
                     </div>
                 </div>
                 
-                <div class="add">
+                <div class="addTask">
                     <span><i class="fa fa-plus-circle"></i></span>
                     <span class="text">Add task</span>
                 </div>
