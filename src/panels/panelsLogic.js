@@ -28,14 +28,8 @@ export const createPanel = (panel) => {
 
 
 panelsContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) {
-        const modal = document.querySelector('.tasksModal');
-        modal.classList.add('visible')
-        const inputs = modal.querySelectorAll('input');
-        inputs.forEach(element => {
-            element.value = '';
-        });
-    }   
+    if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) 
+        document.querySelector('.tasksModal').classList.add('visible');
 });
 
 /* 

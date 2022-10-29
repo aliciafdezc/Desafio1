@@ -6,6 +6,12 @@ export class Task {
         return task;
     }
 
-    constructor( ) {
+    constructor( name, img, label, subtasks, priority ) {
+        this.name = name;
+        this.img = img;
+        this.label = label;
+        this.subtasks = subtasks;
+        this.priority = priority;
+        this.id = new Date().getTime();
     }
 }

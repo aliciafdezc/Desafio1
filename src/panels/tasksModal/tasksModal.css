@@ -41,6 +41,11 @@
 .tasksModal .modalContainer i, .tasksModal .modalContainer .addTask, .tasksModal .modalContainer select, .tasksModal .modalContainer .upload {
   cursor: pointer;
 }
+.tasksModal .modalContainer input.empty {
+  background-color: #fce4e4;
+  border: 1px solid #cc0033;
+  outline: none;
+}
 .tasksModal .modalContainer .taskName, .tasksModal .modalContainer .addTask {
   text-align: center;
   background-color: #242424;
@@ -114,11 +119,6 @@
 }
 .tasksModal .modalContainer .content .checklist input {
   margin-left: 0.5rem;
-}
-.tasksModal .modalContainer .content .checklist input.empty {
-  background-color: #fce4e4;
-  border: 1px solid #cc0033;
-  outline: none;
 }
 .tasksModal .modalContainer .content .checklist i.check {
   font-size: 2rem;

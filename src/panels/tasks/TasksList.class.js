@@ -1,4 +1,4 @@
-import { Task } from "./Task.class";
+import { Task } from "./";
 
 export class TasksList { 
     
@@ -6,18 +6,24 @@ export class TasksList {
         this.loadLocalStorage();
     }
 
+
+    addTask( task ) {
+       this.tasks.push(task);
+       this.saveLocalStorage(); 
+    }
+
     saveLocalStorage() {
-        localStorage.setItem('task', JSON.stringify(this.task));
+        localStorage.setItem('tasks', JSON.stringify(this.tasks));
     }
     
     loadLocalStorage() {
-        this.task = (localStorage.getItem('task')) 
-                        ? JSON.parse(localStorage.getItem('task'))
+        this.tasks = (localStorage.getItem('tasks')) 
+                        ? JSON.parse(localStorage.getItem('tasks'))
                         :[];
     
        
-        this.task = this.task.map( Task.fromJSON );
-        console.log(this.task)
+        this.tasks = this.tasks.map( Task.fromJSON );
+        console.log(this.tasks)
     }
 }
 
