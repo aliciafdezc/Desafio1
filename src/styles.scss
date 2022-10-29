@@ -2,13 +2,10 @@
         './header/header.css', './panels/panels.css', './panels/tasksModal/tasksModal.css'; 
 
 
-
-
 @font-face {
     font-family: primaryFont;
     src: url(./assets/fonts/GOTHIC.TTF);
 }
-
 
 
 .s-one.column,
@@ -82,7 +79,7 @@ body {
         $cuaterciarioOscuro: #111010;
     
     
-        background-color: $terciarioOscuro; 
+        background-color: $secundarioOscuro; 
     }
 }
 
@@ -90,6 +87,3 @@ ul {
     list-style: none;  
 }
 
-.priority  select option {
-    font-family:  Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-}

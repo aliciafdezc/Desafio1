@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="theme light">
+<body class="theme dark">
     <header class="row header">
         <a href="#" class="column s-one b-one"><img class="logo" src="assets/img/logoLight.png"></a>
         <div class="columns s-eleven b-eleven">
@@ -44,41 +44,39 @@
     <div class="tasksModal">
         <div class="modalBackground">
             <div class="modalContainer">
-                <div class="taskName row">
+                <div class="taskName row"> <!-- Name -->
                     <input type="text" placeholder="New Task" class="name columns b-eleven s-eleven"></input>
                     <div class="close column b-one s-one"><i class="fa fa-times-circle"></i></div>
                 </div>
 
                 <div class="content">
-                    <div class="img row">
-                        <p class="columns b-nine s-nine">Select Image</p>
-                        <div class="columns b-three s-three">
-                            <label class="upload u-pull-right" for="img"><i class="fa fa-plus-circle"></i>Upload file</label>
-                            <input type="file" id="img" name="img" accept="image/*" >
-                        </div>
-                    </div>
-                    <div class="label row">
-                        <p class="columns b-twelve s-twelve">Label</p>
-                        <div class="row">
-                            <div class="name columns b-six s-six"><input type="text" placeholder="New label"></input></div>
-                            <div class="color columns b-three s-three"><input type="color" value="#19e4aa"></input></div>
-                            <button type="button" class="add columns b-three s-three""><i class="fa fa-plus-circle"></i>Add</button>
-                        </div>
-                        <div class="container"></div>
+                    <div class="img"> <!-- Image -->
+                        <p class="title">Image</p>
+                        <input type="text" name="imgUrl" placeholder="Image url">
                     </div>
 
-                    <div class="checklist row">
-                        <p class="subtasks columns b-twelve s-twelve">Subtasks</p>
+                    <div class="label"> <!-- Label -->
+                        <p class="title">Label</p>
                         <div class="row">
-                            <div class="name columns b-nine s-nine"><input type="text" placeholder="New subtask"></input></div>
-                            <button type="button" class="add columns b-three s-three u-pull-right"><i class="fa fa-plus-circle"></i>Add</button>
+                            <input class="name columns b-nine s-nine" type="text" placeholder="New label"></input>
+                            <input class="color columns b-three s-three" type="color" value="#19e4aa"></input>
                         </div>
+                    </div>
+
+                    <div class="checklist"> <!-- Checklist -->
+                        <p class="title">Subtasks</p>
                         <div class="container"></div>
+                        <div class="row">
+                            <i class="column s-one b-one check off off fa fa-square-o"></i>
+                            <input class="columns s-six b-eight name" type="text" placeholder="New subtask">
+                            <button type="button" class="columns s-three b-three addSubtask"><i class="fa fa-plus-circle"></i>Add</button>
+                        </div>
+                        
                     </div>
                     
                     <div class="priority">
-                        <p class="priority u-pull-left">Priority</p>
-                        <select>
+                        <p class="title u-pull-left">Priority</p>
+                        <select class="priority">
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
@@ -87,7 +85,7 @@
                 </div>
                 
                 <div class="addTask">
-                    <span><i class="fa fa-plus-circle"></i></span>
+                    <i class="fa fa-plus-circle"></i>
                     <span class="text">Add task</span>
                 </div>
             </div>

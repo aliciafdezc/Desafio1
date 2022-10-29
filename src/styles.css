@@ -136,13 +136,9 @@ body.theme.light {
   background-color: #ffffff;
 }
 body.theme.dark {
-  background-color: #242424;
+  background-color: #686b6d;
 }
 
 ul {
   list-style: none;
-}
-
-.priority select option {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }/*# sourceMappingURL=styles.css.map */

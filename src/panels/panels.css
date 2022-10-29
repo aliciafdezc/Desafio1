@@ -27,9 +27,10 @@
 }
 .panel .addTask {
   border-radius: 0 0 20px 20px;
-}
-.panel .addTask span {
   cursor: pointer;
+}
+.panel .addTask:hover {
+  background-color: #111010;
 }
 .panel .addTask i {
   font-size: 2rem;

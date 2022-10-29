@@ -16,7 +16,7 @@ export const createPanel = (panel) => {
             <div class="tasks columns twelve">
                 <ul class="taskList">${(panel.taskList)}</ul></div>
             <div class="addTask columns twelve">
-                <span><i class="fa fa-plus-circle add"></i></span>
+                <i class="fa fa-plus-circle add"></i>
                 <span class="add">NEW TASK</span>
             </div>
         </div>    
@@ -28,7 +28,14 @@ export const createPanel = (panel) => {
 
 
 panelsContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('add')) document.querySelector('.tasksModal').classList.add('visible');
+    if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) {
+        const modal = document.querySelector('.tasksModal');
+        modal.classList.add('visible')
+        const inputs = modal.querySelectorAll('input');
+        inputs.forEach(element => {
+            element.value = '';
+        });
+    }   
 });
 
 /* 
