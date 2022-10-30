@@ -34,7 +34,7 @@ panelsContainer.addEventListener('click', (e) => {
 
 
 export const appendTaskToPanel = (task) => {
-    panelList.panel.find(element => element.id == clickedPanel.getAttribute('data-id')).addTask(task);
+    panelList.panels.find(element => element.id == clickedPanel.getAttribute('data-id')).addTask(task);
     clickedPanel.querySelector('.tasks').innerHTML += createTaskHtml(task);
     addEvents(clickedPanel.querySelector('.tasks').lastChild);
 }

@@ -7,8 +7,9 @@ import { initModal } from './panels/tasksModal/modalLogic'
 
 export const panelList = new PanelList();
 /* export const tasksList = new TasksList(); */
-panelList.panel.forEach(createPanel); 
+panelList.panels.forEach(createPanel); 
 initModal();
 console.log(panelList)
-/* console.log(tasksList)
-localStorage.clear(); */
+/* 
+console.log(tasksList) */
+/* localStorage.clear(); */

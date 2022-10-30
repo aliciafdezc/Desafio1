@@ -3,8 +3,12 @@ import { clickedPanel } from '..';
 
 export function createTaskHtml(task) {
     let taskHtml = `<div class="taskContainer" data-id="${(task.id)}">
-                        <div class="tagsContainer u-pull-left">
-                            <span class="priority ${(task.priority.toLowerCase())}">${(task.priority)}</span>
+                        <div class="img row">
+                            <img class="columns twelve" src="${(task.img)}">
+                        </div>
+                            <div class="content">
+                            <div class="tagsContainer u-pull-left">
+                                <span class="priority ${(task.priority.toLowerCase())}">${(task.priority)}</span>
                     `;
     if (task.label['labelName'].trim().length > 0) 
         taskHtml += `<span class="label" style="background-color:${(task.label['labelColor'])};">${(task.label['labelName'])}</span>`;                 
@@ -21,13 +25,13 @@ export function createTaskHtml(task) {
                     </div>`;
 
     if (task.subtasks.length > 0) 
-        taskHtml += `<div class="subtasksDropDown u-pull-left">
-                        <i class="fa fa-caret-down check"></i>
+        taskHtml += `<div class="subtasksDropDown">
+                        <i class="fa fa-caret-down"></i>
                         <span>0/${(task.subtasks.length)}</span>
                     </div>`;        
                     
-    taskHtml += `<div class="deadline">7 days</div>
-                    <div class="subtasksContainer u-cf">${(createSubtasksHtml(task.subtasks))}</div>
+    taskHtml += `<div class="subtasksContainer">${(createSubtasksHtml(task.subtasks))}</div>
+                </div>
             </div>`;
 
                                      
@@ -55,7 +59,7 @@ const deleteTask = (taskContainer) => {
     const deleteIcon = taskContainer.querySelector('.delete');
     deleteIcon.addEventListener('click', (e) => {
         taskContainer.remove();
-        const panel = panelList.panel.find(element => element.id == clickedPanel.getAttribute('data-id'));
+        const panel = panelList.panels.find(element => element.id == clickedPanel.getAttribute('data-id'));
         const taskId = taskContainer.getAttribute('data-id');
         panel.deleteTask(taskId);
     });
@@ -68,6 +72,8 @@ const subtasksDropDown = (taskContainer) => {
         const subtasksContainer = taskContainer.querySelector('.subtasksContainer');
         container.addEventListener('click', (e) => {
             subtasksContainer.classList.toggle('visible');
+            container.querySelector('i').classList.toggle('fa-caret-down');
+            container.querySelector('i').classList.toggle('fa-caret-up');
         });
 
         const iconList = subtasksContainer.querySelectorAll('i');
