@@ -1,0 +1,203 @@
+@media (max-width: 550px) {
+    .modalContainer {
+        width: 90vw;
+        left: 5%;
+
+    }
+}
+
+
+@media (min-width: 550px) {
+    .modalContainer {
+        width: 60vw;
+        left: 20%;
+    }
+}
+
+
+@media (min-width: 735px) {
+    .modalContainer {
+        width: 40vw;
+        left: 30%;
+    }
+}
+
+
+.tasksModal {
+    display: none;
+    &.visible { display: block; }
+
+    .modalBackground {
+        background-color: rgba(0, 0, 0,.5);
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+
+    .modalContainer {
+        height: 90vh;
+        z-index: 10;
+        background-color: white;
+        border-radius: 30px;
+        position: absolute;
+        top: 5%;
+
+        i, .addTask, select, .upload { cursor: pointer; }
+
+        input.empty {
+            background-color: #fce4e4;
+            border: 1px solid #cc0033;
+            outline: none;
+        }
+        
+        .taskName, .addTask {
+            text-align: center;
+            background-color: #242424;
+            padding: 2rem 3rem;
+            color: white;
+            height: 10%;
+        }
+
+        .taskName {
+            border-radius: 20px 20px 0 0;
+            .name { 
+                font-size: 1.6rem;
+                background: transparent;
+                border: none; 
+            }
+            .close { font-size: 2rem; }
+        }
+       
+        .content {
+            padding: 2rem 3rem;
+            background-color: white;
+            color: #242424;
+            overflow-y: scroll; 
+            height: 80%; 
+
+            div.img {
+                height: auto; // to wrap floated children
+                overflow:auto; // to wrap floated children
+                input {
+                   width: 100%;
+                }
+                label {
+                    padding: 1rem 2rem;
+                    width: 15rem;
+                    &:hover {
+                        background-color: #111010;
+                    }
+                }
+            }
+
+            button, label {
+                font-weight: normal;
+                font-size: 1.3rem;
+                color:white;
+                background-color: #242424;
+                border-radius: 30px;
+                i {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                }
+            }
+
+            button {
+                padding: 0;
+                text-align: center;
+                border: none;
+                text-transform: none;
+                &:hover {
+                    background-color: #111010;
+                }
+
+            }
+
+            input {
+                height: 3.5rem;
+            }
+            
+            & > div {
+                p {
+                    margin-bottom: 1rem;
+                }
+                padding: 2.5rem 3rem;   
+            }
+            
+            .label > div {
+                margin-left: 0;
+            
+            }
+
+            .checklist {
+                input {
+                    margin-left: 0.5rem;
+                }
+                i.check {
+                    font-size: 2rem;
+                }
+                .container {
+                    margin: 0 0 1.5rem 0 ;
+                    i.check {
+                        margin-right: 1.3rem;
+                    }
+                }
+            }
+
+            .priority {
+                select {
+                    background-color: #242424;   
+                    color: white; 
+                    border: none;
+                    option {
+                        border: none;
+                        outline: none;
+                        font-family:  Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+                    }
+                }
+            }
+            
+            .progressBarContainer {
+                border-radius: 30px;
+                display: block;
+                background-color: #e7e4dd;
+            }
+    
+            .progressBar {
+                display: block;
+                height: 1em;
+                width: 0%;
+                border-radius: 30px;
+                background-color: #242424;    
+            }
+            
+            .title {
+                font-size: 1.9rem;
+                margin-right: 2rem;
+            }
+        }
+
+        .addTask { 
+            cursor: pointer;
+            width: 100%;
+            position: inherit;
+            bottom: 0;
+            border-radius: 0 0 20px 20px; 
+            .text {
+                font-size: 1.6rem;
+            }
+            i {
+                font-size: 2rem;
+                margin-right: 1rem;
+            }
+            &:hover {
+                background-color: #111010;
+            }
+            
+        }
+
+        
+    }
+}

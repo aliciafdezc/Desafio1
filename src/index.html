@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="theme light">
+<body class="theme dark">
+    <!-- ----- HEADER ----- -->
     <header class="row header">
         <a href="#" class="column s-one b-one"><img class="logo" src="assets/img/logoLight.png"></a>
         <div class="columns s-eleven b-eleven">
@@ -30,18 +31,74 @@
         </div>
     </header>
 
+    <!-- ----- MENU ----- -->
     <nav class="menu horizontal">
         <ul class="projectList">
         </ul>
     </nav>
   
+    <!-- ----- PANELS ----- -->
     <div class="scroller mainContainer row">
         <div class="panelsContainer columns twelve">
             <div class="panelsContainer row">
             </div>
         </div>
     </div>
-    
+
+    <!-- ----- MODAL ----- -->
+    <div class="tasksModal">
+        <div class="modalBackground">
+            <div class="modalContainer">
+                <div class="taskName row"> <!-- Name -->
+                    <input type="text" placeholder="New Task" class="name columns b-eleven s-eleven"></input>
+                    <div class="close column b-one s-one"><i class="fa fa-times-circle"></i></div>
+                </div>
+
+                <div class="content">
+                    <div class="img"> <!-- Image -->
+                        <p class="title">Image</p>
+                        <input type="text" class="url" placeholder="Image url">
+                    </div>
+
+                    <div class="label"> <!-- Label -->
+                        <p class="title">Label</p>
+                        <div class="row">
+                            <input class="name columns b-nine s-nine" type="text" placeholder="New label"></input>
+                            <input class="color columns b-three s-three" type="color""></input>
+                        </div>
+                    </div>
+
+                    <div class="checklist"> <!-- Checklist -->
+                        <p class="title">Subtasks</p>
+                        <div class="container"></div>
+                        <div class="row">
+                            <i class="column s-one b-one check off off fa fa-square-o"></i>
+                            <input class="columns s-six b-eight name" type="text" placeholder="New subtask">
+                            <button type="button" class="columns s-three b-three addSubtask"><i class="fa fa-plus-circle"></i>Add</button>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="priority">
+                        <p class="title u-pull-left">Priority</p>
+                        <select>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+
+                </div>
+                
+                <div class="addTask">
+                    <i class="fa fa-plus-circle"></i>
+                    <span class="text">Add task</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----- FOOTER ----- -->
     <footer class="row">
         <span class="columns b-six s-nine copyright">Copyright&copy; 2022-2023 | Alicia Fernández Cambronero</span>
         <div class="columns b-six s-three">

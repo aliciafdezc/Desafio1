@@ -1,0 +1,66 @@
+.taskContainer {
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  z-index: 30;
+}
+.taskContainer img {
+  border-radius: 15px 15px 0 0;
+}
+.taskContainer .content {
+  padding: 1.8rem 2rem;
+}
+.taskContainer .content .tagsContainer span {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 34px;
+  color: white;
+}
+.taskContainer .content .tagsContainer span.low {
+  background-color: #66e25f;
+}
+.taskContainer .content .tagsContainer span.medium {
+  background-color: #ffc423;
+}
+.taskContainer .content .tagsContainer span.high {
+  background-color: #ea1b59;
+}
+.taskContainer .content .iconsContainer i {
+  font-size: 1.8rem;
+  color: #686b6d;
+  padding: 0.6rem 0 0 0.7rem;
+}
+.taskContainer .content .iconsContainer i:hover {
+  color: #111010;
+}
+.taskContainer .content .taskName {
+  margin-top: 4rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.taskContainer .content .taskName .line {
+  background-color: #111010;
+  height: 0.2rem;
+}
+.taskContainer .content .subtasksDropDown {
+  width: 6.5rem;
+  background-color: #111010;
+  padding: 0.2rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 34px;
+  color: white;
+  margin: 0 1.5rem 0.6rem 0;
+}
+.taskContainer .content .subtasksDropDown i {
+  margin-right: 0.5rem;
+}
+.taskContainer .content .subtasksContainer {
+  display: none;
+  line-height: 0;
+}
+.taskContainer .content .subtasksContainer.visible {
+  display: block;
+}
+.taskContainer .content .subtasksContainer i {
+  margin: 0.5rem 1rem 0 0.5em;
+}/*# sourceMappingURL=tasks.css.map */

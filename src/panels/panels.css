@@ -8,28 +8,35 @@
   max-height: 100%;
   border-radius: 20px;
 }
-.panel div div {
+.panel div .columns {
+  margin-left: 0;
+}
+.panel .title, .panel .addTask {
   padding: 3rem 4rem;
-}
-.panel .panelTasks {
-  overflow-y: scroll;
-}
-.panel .panelTitle, .panel .panelBottom {
   background-color: #242424;
   text-align: center;
   color: white;
 }
-.panel .panelTitle {
+.panel .title {
   border-radius: 20px 20px 0 0;
 }
-.panel .panelBottom {
+.panel .tasks {
+  overflow-y: scroll;
+  background: #e7e4dd;
+  border-radius: 10px;
+  height: 80%;
+  padding: 1rem 1rem 0 1rem;
+}
+.panel .addTask {
   border-radius: 0 0 20px 20px;
+  cursor: pointer;
 }
-.panel .panelBottom span {
-  margin-right: 1rem;
+.panel .addTask:hover {
+  background-color: #111010;
 }
-.panel .panelBottom i {
+.panel .addTask i {
   font-size: 2rem;
+  margin-right: 1rem;
 }
 
 /* Scrollbar  chrome */

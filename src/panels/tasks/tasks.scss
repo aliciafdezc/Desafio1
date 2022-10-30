@@ -1,0 +1,68 @@
+.taskContainer {
+    background: white;
+    border-radius:15px;
+    margin-bottom: 1rem;
+    z-index: 30; 
+
+    img { border-radius: 15px 15px 0 0; }
+    .content {
+        padding: 1.8rem 2rem;
+            
+        .tagsContainer span {
+            padding: .5rem 1rem;
+            font-size: 1.2rem;
+            border-radius: 34px;
+            color:white;
+            &.low {
+                background-color: #66e25f;
+            }
+            &.medium {
+                background-color: #ffc423;
+            }
+            &.high { 
+                background-color: #ea1b59;
+            }
+        }
+
+        .iconsContainer i {
+            font-size: 1.8rem;
+            color: #686b6d;
+            padding: .6rem 0 0 .7rem;
+            &:hover {
+                color:#111010;
+            }
+        }
+
+        .taskName {
+            margin-top: 4rem;
+            width: 100%;
+            margin-bottom: 1rem;
+            .line {
+                background-color:#111010;
+                height: .2rem;          
+            }
+        }
+
+        .subtasksDropDown {  
+            width: 6.5rem;
+            background-color: #111010;
+            padding: .2rem 1.5rem;
+            font-size: 1.2rem;
+            border-radius: 34px;
+            color:white;
+            margin: 0 1.5rem .6rem 0;
+            i { margin-right: .5rem; }
+        }
+
+        .subtasksContainer {
+            display: none;
+            line-height: 0;
+            &.visible { display: block; }
+            i { margin: .5rem 1rem 0 .5em; }
+        }
+    }
+}
+
+
+
+

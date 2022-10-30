@@ -3,6 +3,8 @@
 @import './footer/footer.css';
 @import './header/header.css';
 @import './panels/panels.css';
+@import './panels/tasksModal/tasksModal.css';
+@import './panels/tasks/tasks.css';
 @font-face {
   font-family: primaryFont;
   src: url(./assets/fonts/GOTHIC.TTF);
@@ -129,12 +131,13 @@ body {
 }
 body * {
   margin: 0;
+  box-sizing: border-box;
 }
 body.theme.light {
   background-color: #ffffff;
 }
 body.theme.dark {
-  background-color: #242424;
+  background-color: #686b6d;
 }
 
 ul {
