@@ -15,9 +15,9 @@ export class PanelList {
     loadLocalStorage() {
         this.panel = (localStorage.getItem('panel')) 
                         ? JSON.parse(localStorage.getItem('panel'))
-                        : [ new Panel([], 'TO DO'), 
-                            new Panel([], 'IN PROGRESS'),
-                            new Panel([], 'DONE')
+                        : [ new Panel([], 'TO DO', 1), 
+                            new Panel([], 'IN PROGRESS', 2),
+                            new Panel([], 'DONE', 3)
                         ];
 
         this.panel = this.panel.map( Panel.fromJSON );

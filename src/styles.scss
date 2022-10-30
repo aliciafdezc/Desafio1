@@ -1,5 +1,6 @@
 @import './css-skeleton/normalize.css', './css-skeleton/skeleton.css', './footer/footer.css', 
-        './header/header.css', './panels/panels.css', './panels/tasksModal/tasksModal.css'; 
+        './header/header.css', './panels/panels.css', './panels/tasksModal/tasksModal.css',
+        './panels/tasks/tasks.css'; 
 
 
 @font-face {
@@ -86,4 +87,6 @@ body {
 ul {
     list-style: none;  
 }
+
+
 

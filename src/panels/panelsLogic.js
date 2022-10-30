@@ -1,20 +1,18 @@
 /* import { Task } from '../tasks'; */
-import { PaneList } from './index';
+import { panelList } from './..';
+import { createTaskHtml, addEvents } from "./tasks";
 
 const panelSize = 'four';
 const panelsContainer = document.querySelector('.panelsContainer.row');
+export let clickedPanel;
 
-export const initPanels = (panel) => {
-    createPanel(panel);
-}
 
 export const createPanel = (panel) => {
     let hmtlPanel = `
-    <div class="panel columns ${(panelSize)}">
+    <div class="panel columns ${(panelSize)}" data-id="${(panel.id)}">
         <div class="row">
             <div class="title columns twelve">${(panel.name)}</div>
-            <div class="tasks columns twelve">
-                <ul class="taskList">${(panel.taskList)}</ul></div>
+            <div class="tasks columns twelve">${(panel.taskList)}</div>
             <div class="addTask columns twelve">
                 <i class="fa fa-plus-circle add"></i>
                 <span class="add">NEW TASK</span>
@@ -28,25 +26,16 @@ export const createPanel = (panel) => {
 
 
 panelsContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) 
+    if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) {
         document.querySelector('.tasksModal').classList.add('visible');
+        clickedPanel = e.target.closest('.panel');
+    }   
 });
 
-/* 
-divTodoList.addEventListener('click', (event) => {
-    const nombreElemento = event.target.localName; //Puedo identificar la parte del li a la que hice click
-    //input, label o button
 
-    const todoElemento = event.target.parentElement.parentElement; //Obtengo el li con el id del elemento
-    const todoId = todoElemento.getAttribute('data-id');
-    
-    if ( nombreElemento.includes('input') ) {//click en el check
-        todoList.marcarCompletado(todoId);
-        todoElemento.classList.toggle('completed');
-    } else if (nombreElemento.includes('button')){
-        //Hay que borrar el todo
-        todoList.eliminarTodo( todoId );
-        //La referencia html también hay que borrarla
-        divTodoList.removeChild( todoElemento );
-    }
-}); */
+export const appendTaskToPanel = (task) => {
+    panelList.panel.find(element => element.id == clickedPanel.getAttribute('data-id')).addTask(task);
+    clickedPanel.querySelector('.tasks').innerHTML += createTaskHtml(task);
+    addEvents(clickedPanel.querySelector('.tasks').lastChild);
+}
+

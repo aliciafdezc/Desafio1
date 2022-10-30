@@ -7,21 +7,21 @@ export class Panel {
         return panel;
     }
 
-    constructor( taskList, name ) {
+    constructor( taskList, name, id ) {
         this.taskList = taskList;
         this.name = name;
-        this.id = new Date().getTime();
+        this.id = id;
     }
 
-
-    addTask() {
-       
+    addTask(task) {
+       this.taskList.push(task);
+       /* this.saveLocalStorage(); */
     }
 
     
-    deleteTask() {
-       
+    deleteTask(id) {
+        this.taskList = this.taskList.filter( task => task.id != id );
+        /* this.saveLocalStorage(); */
     }
-
 }
 

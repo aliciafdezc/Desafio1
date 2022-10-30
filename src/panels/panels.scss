@@ -18,31 +18,36 @@ $accentDark: #111010;
   min-height: 10%;
   max-height: 100%;
   border-radius: 20px;
-  & div .columns {
+  div .columns {
     margin-left: 0;
   }
-  & .tasks,  & .title, & .addTask{
+
+  .title, .addTask{
     padding: 3rem 4rem;
-  }
-  & .tasks {
-    overflow-y: scroll;
-  }
-  & .title, & .addTask {
     background-color: $tertiaryDark;
     text-align: center;
     color: white;
   }
-  & .title {
+
+  .title {
     border-radius: 20px 20px 0 0;
   }
-  & .addTask {
+
+  .tasks {
+    overflow-y: scroll;
+    background: #e7e4dd;
+    border-radius: 10px;
+    height: 80%;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .addTask {
     border-radius: 0 0 20px 20px;
     cursor: pointer;
     &:hover {
-      
       background-color: #111010;
     }
-    & i {
+    i {
       font-size: 2rem;
       margin-right: 1rem;
     }

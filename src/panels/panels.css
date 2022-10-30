@@ -11,19 +11,21 @@
 .panel div .columns {
   margin-left: 0;
 }
-.panel .tasks, .panel .title, .panel .addTask {
-  padding: 3rem 4rem;
-}
-.panel .tasks {
-  overflow-y: scroll;
-}
 .panel .title, .panel .addTask {
+  padding: 3rem 4rem;
   background-color: #242424;
   text-align: center;
   color: white;
 }
 .panel .title {
   border-radius: 20px 20px 0 0;
+}
+.panel .tasks {
+  overflow-y: scroll;
+  background: #e7e4dd;
+  border-radius: 10px;
+  height: 80%;
+  padding: 1rem 1rem 0 1rem;
 }
 .panel .addTask {
   border-radius: 0 0 20px 20px;

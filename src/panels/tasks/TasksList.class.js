@@ -23,7 +23,6 @@ export class TasksList {
     
        
         this.tasks = this.tasks.map( Task.fromJSON );
-        console.log(this.tasks)
     }
 }
 
