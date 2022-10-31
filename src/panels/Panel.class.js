@@ -24,10 +24,13 @@ export class Panel {
         this.saveLocalStorage();
     }
 
+    getTask(id) {
+        return this.taskList.find(task => task.id == id);  
+    }
 
     saveLocalStorage() {
         localStorage.setItem('panel' + this.id, JSON.stringify(this));
-        console.log(localStorage);
+        /* console.log(localStorage); */
     }
 
 

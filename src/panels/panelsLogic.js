@@ -20,6 +20,8 @@ export const createPanel = (panel) => {
         </div>    
     </div>`;
     
+    
+
     const panelsContainer = document.querySelector('.panelsContainer.row');
     panelsContainer.innerHTML += hmtlPanel;
 };
@@ -35,7 +37,49 @@ panelsContainer.addEventListener('click', (e) => {
 
 export const appendTaskToPanel = (task) => {
     panelList.panels.find(element => element.id == clickedPanel.getAttribute('data-id')).addTask(task);
-    clickedPanel.querySelector('.tasks').innerHTML += createTaskHtml(task);
+    clickedPanel.querySelector('.tasks').append(createTaskHtml(task));
     addEvents(clickedPanel.querySelector('.tasks').lastChild);
 }
 
+export const addDropEvents = () => {
+    const panels = document.querySelectorAll('.tasks');
+    panels.forEach(p => {
+        p.addEventListener('dragenter', dragEnter);
+        p.addEventListener('dragover', dragOver);
+        p.addEventListener('drop', drop);
+        p.addEventListener('dragleave', dragLeave);
+    });
+    
+}
+
+const dragEnter = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+}
+
+const dragOver = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+}
+
+const dragLeave = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+}
+
+const drop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    
+    const id = e.dataTransfer.getData('text/plain');
+    const draggable = document.querySelector('[data-id="' + id + '"]');
+    const oldPanelId = draggable.closest('.panel').getAttribute('data-id');
+    const newPanelId = e.currentTarget.parentNode.parentNode.getAttribute('data-id');
+    const oldPanel = panelList.panels.find(element => element.id == oldPanelId);
+    const newPanel = panelList.panels.find(element => element.id == newPanelId);
+    const task = oldPanel.getTask(id);
+    oldPanel.deleteTask(id);
+    newPanel.addTask(task);
+    e.currentTarget.append(draggable);
+}

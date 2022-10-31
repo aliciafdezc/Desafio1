@@ -34,8 +34,10 @@ export function createTaskHtml(task) {
                 </div>
             </div>`;
 
+    const div = document.createElement('div');
+    div.innerHTML = taskHtml;
                                      
-    return taskHtml;
+    return div.firstElementChild;
 }
 
 function createSubtasksHtml(list) {
@@ -53,6 +55,7 @@ function createSubtasksHtml(list) {
 export function addEvents(taskContainer) {
     deleteTask(taskContainer);
     subtasksDropDown(taskContainer);
+    makeDraggable(taskContainer);
 }
 
 const deleteTask = (taskContainer) => {
@@ -85,3 +88,18 @@ const subtasksDropDown = (taskContainer) => {
         });  
     } 
 }
+
+const makeDraggable = (taskContainer) => {
+    const imgs = taskContainer.querySelectorAll('img');
+    imgs.forEach(img => {
+        img.draggable = false;
+    });
+    taskContainer.draggable = true;
+    taskContainer.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', e.target.getAttribute('data-id'));
+        setTimeout(() => {
+            e.target.classList.add('oculto');
+        }, 0);
+    });
+}
+

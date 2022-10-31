@@ -4,7 +4,6 @@
 
 .panel {
   background-color: #e7e4dd;
-  min-height: 10%;
   max-height: 100%;
   border-radius: 20px;
 }
@@ -24,8 +23,8 @@
   overflow-y: scroll;
   background: #e7e4dd;
   border-radius: 10px;
-  height: 80%;
-  padding: 1rem 1rem 0 1rem;
+  min-height: 5rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 .panel .addTask {
   border-radius: 0 0 20px 20px;
