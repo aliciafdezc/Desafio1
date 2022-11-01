@@ -1,21 +1,21 @@
-nav.menu.horizontal.tabs {
+nav.horizontalMenu.tabs {
   background-color: #242424;
   line-height: 0;
 }
-nav.menu.horizontal.tabs i {
+nav.horizontalMenu.tabs i {
   color: white;
   font-size: 2rem;
   padding: 1em 0 1em 1em;
 }
-nav.menu.horizontal.tabs .projectListContainer {
+nav.horizontalMenu.tabs .projectListContainer {
   height: 100%;
   padding: 0 2rem 0 2rem;
 }
-nav.menu.horizontal.tabs .projectListContainer ul.projectList {
+nav.horizontalMenu.tabs .projectListContainer ul.projectList {
   display: flow-root;
   margin: 0;
 }
-nav.menu.horizontal.tabs .projectListContainer ul.projectList li {
+nav.horizontalMenu.tabs .projectListContainer ul.projectList li {
   cursor: pointer;
   color: white;
   float: left;
@@ -23,9 +23,44 @@ nav.menu.horizontal.tabs .projectListContainer ul.projectList li {
   list-style: none;
   padding: 2em 1.5em;
 }
-nav.menu.horizontal.tabs .projectListContainer ul.projectList li:hover {
+nav.horizontalMenu.tabs .projectListContainer ul.projectList li:hover {
   background-color: #111010;
 }
-nav.menu.horizontal.tabs .projectListContainer ul.projectList li.current {
+nav.horizontalMenu.tabs .projectListContainer ul.projectList li.current {
   background-color: #686b6d;
+}
+
+nav.horizontalMenu.buttons {
+  line-height: 0;
+}
+nav.horizontalMenu.buttons i {
+  color: white;
+  font-size: 2rem;
+  padding: 1em 0 1em 1em;
+}
+nav.horizontalMenu.buttons .projectListContainer {
+  height: 100%;
+  padding: 0 2rem 0 2rem;
+}
+nav.horizontalMenu.buttons .projectListContainer ul.projectList {
+  display: flow-root;
+  margin: 0;
+}
+nav.horizontalMenu.buttons .projectListContainer ul.projectList li {
+  border: #242424 2px solid;
+  margin: 1rem 0.5rem 0 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  float: left;
+  background-color: #242424;
+  list-style: none;
+  padding: 1.5em 1.5em;
+}
+nav.horizontalMenu.buttons .projectListContainer ul.projectList li.current {
+  background-color: #686b6d;
+}
+nav.horizontalMenu.buttons .projectListContainer ul.projectList li:hover {
+  background-color: #111010;
+  border-color: #111010;
 }/*# sourceMappingURL=horizontalMenu.css.map */
