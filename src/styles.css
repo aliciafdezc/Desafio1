@@ -5,6 +5,7 @@
 @import './panels/panels.css';
 @import './panels/tasksModal/tasksModal.css';
 @import './panels/tasks/tasks.css';
+@import './header/horizontalMenu/horizontalMenu.css';
 @font-face {
   font-family: primaryFont;
   src: url(./assets/fonts/GOTHIC.TTF);

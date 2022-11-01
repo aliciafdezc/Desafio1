@@ -20,8 +20,6 @@ export const createPanel = (panel) => {
         </div>    
     </div>`;
     
-    
-
     const panelsContainer = document.querySelector('.panelsContainer.row');
     panelsContainer.innerHTML += hmtlPanel;
 };

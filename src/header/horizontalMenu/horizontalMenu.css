@@ -1,0 +1,31 @@
+nav.menu.horizontal.tabs {
+  background-color: #242424;
+  line-height: 0;
+}
+nav.menu.horizontal.tabs i {
+  color: white;
+  font-size: 2rem;
+  padding: 1em 0 1em 1em;
+}
+nav.menu.horizontal.tabs .projectListContainer {
+  height: 100%;
+  padding: 0 2rem 0 2rem;
+}
+nav.menu.horizontal.tabs .projectListContainer ul.projectList {
+  display: flow-root;
+  margin: 0;
+}
+nav.menu.horizontal.tabs .projectListContainer ul.projectList li {
+  cursor: pointer;
+  color: white;
+  float: left;
+  background-color: #242424;
+  list-style: none;
+  padding: 2em 1.5em;
+}
+nav.menu.horizontal.tabs .projectListContainer ul.projectList li:hover {
+  background-color: #111010;
+}
+nav.menu.horizontal.tabs .projectListContainer ul.projectList li.current {
+  background-color: #686b6d;
+}/*# sourceMappingURL=horizontalMenu.css.map */
