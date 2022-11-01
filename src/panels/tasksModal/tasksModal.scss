@@ -22,7 +22,7 @@
     }
 }
 
-
+ 
 .tasksModal {
     display: none;
     &.visible { display: block; }
@@ -44,7 +44,7 @@
         position: absolute;
         top: 5%;
 
-        i, .addTask, select, .upload { cursor: pointer; }
+        i, .modalBottom, select, .upload { cursor: pointer; }
 
         input.empty {
             background-color: #fce4e4;
@@ -52,7 +52,7 @@
             outline: none;
         }
         
-        .taskName, .addTask {
+        .taskName, .modalBottom {
             text-align: center;
             background-color: #242424;
             padding: 2rem 3rem;
@@ -179,7 +179,7 @@
             }
         }
 
-        .addTask { 
+        .modalBottom { 
             cursor: pointer;
             width: 100%;
             position: inherit;
@@ -188,10 +188,10 @@
             .text {
                 font-size: 1.6rem;
             }
-            i {
+          /*   i {
                 font-size: 2rem;
                 margin-right: 1rem;
-            }
+            } */
             &:hover {
                 background-color: #111010;
             }

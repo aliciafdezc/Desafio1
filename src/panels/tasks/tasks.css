@@ -55,6 +55,9 @@
   margin-right: 0.5rem;
 }
 .taskContainer .content .subtasksContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: none;
   line-height: 0;
 }

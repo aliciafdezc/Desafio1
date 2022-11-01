@@ -38,7 +38,7 @@
   position: absolute;
   top: 5%;
 }
-.tasksModal .modalContainer i, .tasksModal .modalContainer .addTask, .tasksModal .modalContainer select, .tasksModal .modalContainer .upload {
+.tasksModal .modalContainer i, .tasksModal .modalContainer .modalBottom, .tasksModal .modalContainer select, .tasksModal .modalContainer .upload {
   cursor: pointer;
 }
 .tasksModal .modalContainer input.empty {
@@ -46,7 +46,7 @@
   border: 1px solid #cc0033;
   outline: none;
 }
-.tasksModal .modalContainer .taskName, .tasksModal .modalContainer .addTask {
+.tasksModal .modalContainer .taskName, .tasksModal .modalContainer .modalBottom {
   text-align: center;
   background-color: #242424;
   padding: 2rem 3rem;
@@ -155,20 +155,20 @@
   font-size: 1.9rem;
   margin-right: 2rem;
 }
-.tasksModal .modalContainer .addTask {
+.tasksModal .modalContainer .modalBottom {
   cursor: pointer;
   width: 100%;
   position: inherit;
   bottom: 0;
   border-radius: 0 0 20px 20px;
+  /*   i {
+        font-size: 2rem;
+        margin-right: 1rem;
+    } */
 }
-.tasksModal .modalContainer .addTask .text {
+.tasksModal .modalContainer .modalBottom .text {
   font-size: 1.6rem;
 }
-.tasksModal .modalContainer .addTask i {
-  font-size: 2rem;
-  margin-right: 1rem;
-}
-.tasksModal .modalContainer .addTask:hover {
+.tasksModal .modalContainer .modalBottom:hover {
   background-color: #111010;
 }/*# sourceMappingURL=tasksModal.css.map */

@@ -1,5 +1,6 @@
 import { panelList } from '../..';
 import { clickedPanel } from '..';
+import { modal, setModal } from '../tasksModal/modalLogic';
 
 export function createTaskHtml(task) {
     let taskHtml = `<div class="taskContainer" data-id="${(task.id)}">
@@ -41,11 +42,11 @@ export function createTaskHtml(task) {
 }
 
 function createSubtasksHtml(list) {
-    let letHtml = `<ul>`;
+    let letHtml = `<ul class="subtasksList">`;
     let iconClass = '';
     list.forEach(subtask => {
         subtask.isCompleted ? iconClass = 'fa-check-square-o' : iconClass = 'fa-square-o';
-        letHtml += `<li><i class="fa ${(iconClass)}"></i>${(subtask.name)}</li>`;
+        letHtml += `<li class="subtasksList" data-id="${(subtask.id)}"><i class="fa ${(iconClass)}"></i>${(subtask.name)}</li>`;
     });
 
     return letHtml += `</ul>`;
@@ -54,6 +55,7 @@ function createSubtasksHtml(list) {
 
 export function addEvents(taskContainer) {
     deleteTask(taskContainer);
+    editTask(taskContainer);
     subtasksDropDown(taskContainer);
     makeDraggable(taskContainer);
 }
@@ -67,6 +69,36 @@ const deleteTask = (taskContainer) => {
         panel.deleteTask(taskId);
     });
 };
+
+const editTask = (taskContainer) => {
+    taskContainer.addEventListener('click', (e) => {
+        const classes = ['subtasksContainer', 'subtasksDropDown', 'subtasksList'];
+
+        if (!classes.some(c => e.target.classList.contains(c)) && !classes.some(c => e.target.parentNode.classList.contains(c))) {
+            modal.classList.add('visible');
+            modal.querySelector('.modalBottom').classList.add('saveTask');
+            const panel = panelList.panels.find(p => p.id == taskContainer.closest('.panel').getAttribute('data-id'));
+            const task = panel.taskList.find(t => t.id == taskContainer.getAttribute('data-id'));
+            setModal(task);
+        }
+    });
+}
+
+export const editTaskHtml = (task) => {
+    const taskContainer = document.querySelector(`[data-id ="${(task.id)}"]`);
+    taskContainer.querySelector('img').src = task.img;
+    const priority = taskContainer.querySelector('.priority');
+    priority.innerHTML = task.priority;
+    priority.className = '';
+    priority.classList.add('priority', task.priority.toLowerCase());
+    const label = taskContainer.querySelector('.label');
+    label.style.backgroundColor = task.label['labelColor'];
+    label.innerHTML = task.label['labelName'];
+    taskContainer.querySelector('.taskName').querySelector('.name').innerHTML = task.name;
+    taskContainer.querySelector('.subtasksDropDown').querySelector('span').innerHTML = '0/' + task.subtasks.length;
+    taskContainer.querySelector('.subtasksContainer').innerHTML = createSubtasksHtml(task.subtasks);
+}
+
 
 const subtasksDropDown = (taskContainer) => {
     const container = taskContainer.querySelector('.subtasksDropDown');

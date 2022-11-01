@@ -55,6 +55,7 @@
         }
 
         .subtasksContainer {
+            width: fit-content;
             display: none;
             line-height: 0;
             &.visible { display: block; }

@@ -15,13 +15,13 @@ export class Panel {
 
     addTask(task) {
        this.taskList.push(task);
-       this.saveLocalStorage();
+      /*  this.saveLocalStorage(); */
     }
 
     
     deleteTask(id) {
         this.taskList = this.taskList.filter( task => task.id != id );
-        this.saveLocalStorage();
+        /* this.saveLocalStorage(); */
     }
 
     getTask(id) {

@@ -19,7 +19,7 @@ export class PanelList {
                             new Panel([], 'IN PROGRESS', 2),
                             new Panel([], 'DONE', 3)
                         ];
-
+                        
         this.panels = this.panels.map( Panel.fromJSON );
     }
 
