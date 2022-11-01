@@ -70,9 +70,23 @@ header .searchBar input:focus {
 header li.settings {
   position: relative;
 }
-header li.settings:hover .settingsMenu {
+header li.settings:hover .settingsMenu, header li.settings:hover::before {
   visibility: visible;
   transition-delay: 0s;
+}
+header li.settings::before { /*  Dropdown menu triangle */
+  transition: 0.1s 0.2s;
+  visibility: hidden;
+  content: ""; /* Required to display content */
+  position: absolute; /* Sets the position absolute to the top div */
+  top: 3.3rem;
+  right: -0.3rem; /* position the little arrow */
+  width: 0;
+  z-index: 1;
+  height: 0;
+  border-bottom: solid 15px #d8d5cc; /* Creates the arrow pointing up, to change to a notch instead user border-top */
+  border-left: solid 15px transparent; /* Creates triangle effect */
+  border-right: solid 15px transparent; /* Creates triangle effect */
 }
 header li.settings .settingsMenu {
   width: -webkit-max-content;
@@ -85,27 +99,15 @@ header li.settings .settingsMenu {
   clear: both;
   transition: 0.1s 0.2s;
   display: block;
-  visibility: visible;
+  visibility: hidden;
   text-align: center;
   position: absolute;
   top: 4.2rem;
   right: -3rem;
   margin: 0;
   font-size: 1.4rem;
-  box-shadow: 1px 1px 10px 1px #242424;
+  box-shadow: 5px 5px 10px #242424;
   text-align: left;
-}
-header li.settings .settingsMenu::before { /*  Dropdown menu triangle */
-  content: ""; /* Required to display content */
-  position: absolute; /* Sets the position absolute to the top div */
-  top: -0.9rem;
-  left: 65%; /* position the little arrow */
-  width: 0;
-  z-index: -1;
-  height: 0;
-  border-bottom: solid 15px #d8d5cc; /* Creates the arrow pointing up, to change to a notch instead user border-top */
-  border-left: solid 15px transparent; /* Creates triangle effect */
-  border-right: solid 15px transparent; /* Creates triangle effect */
 }
 header li.settings .settingsMenu li {
   background-color: #e7e4dd;
