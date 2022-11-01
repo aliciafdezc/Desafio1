@@ -17,7 +17,7 @@
     width: 20em;
   }
   header {
-    padding: 2em 2.5em;
+    padding: 2em 3.5em;
   }
   header .logo {
     height: 2.5em;
@@ -67,57 +67,81 @@ header .searchBar input:focus {
   outline: none;
   box-shadow: 0 0 10px 0px white;
 }
-
-li.settings {
+header li.settings {
   position: relative;
 }
-
-li.icons i {
-  color: white;
-  transition: 0.3s;
-  font-size: 3rem;
-}
-
-.settings:hover .settingsMenu, .settings:active .settingsMenu {
+header li.settings:hover .settingsMenu {
   visibility: visible;
-  opacity: 1;
+  transition-delay: 0s;
 }
-
-.settingsMenu {
-  padding: 0.5rem 0.1rem;
-  border-radius: 20px;
-  background-color: #e7e4dd;
+header li.settings .settingsMenu {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 0 1rem 0;
+  z-index: 20;
+  border-radius: 10px;
+  background-color: #d8d5cc;
   clear: both;
-  width: 9rem;
-  visibility: hidden;
+  transition: 0.1s 0.2s;
   display: block;
-  opacity: 0;
+  visibility: visible;
   text-align: center;
   position: absolute;
-  top: 2.7rem;
-  right: -1.5rem;
+  top: 4.2rem;
+  right: -3rem;
   margin: 0;
-  font-size: 100%;
-  transition: all 0.2s ease-in-out;
+  font-size: 1.4rem;
+  box-shadow: 1px 1px 10px 1px #242424;
+  text-align: left;
 }
-.settingsMenu::before { /*  Dropdown menu triangle */
+header li.settings .settingsMenu::before { /*  Dropdown menu triangle */
   content: ""; /* Required to display content */
   position: absolute; /* Sets the position absolute to the top div */
-  top: -0.7rem;
+  top: -0.9rem;
   left: 65%; /* position the little arrow */
   width: 0;
-  z-index: 1;
+  z-index: -1;
   height: 0;
-  border-bottom: solid 15px #e7e4dd; /* Creates the arrow pointing up, to change to a notch instead user border-top */
+  border-bottom: solid 15px #d8d5cc; /* Creates the arrow pointing up, to change to a notch instead user border-top */
   border-left: solid 15px transparent; /* Creates triangle effect */
   border-right: solid 15px transparent; /* Creates triangle effect */
 }
-.settingsMenu li {
-  padding: 1.3rem 0;
+header li.settings .settingsMenu li {
+  background-color: #e7e4dd;
+  padding: 1.5rem 2.5rem;
   cursor: pointer;
+  border-bottom: 1px #d8d5cc solid;
+  border-top: 1px #d8d5cc solid;
 }
-.settingsMenu li:hover {
+header li.settings .settingsMenu li:hover {
+  background-color: #686b6d;
+  border-color: #686b6d;
   color: white;
   font-weight: bold;
-  font-size: 115%;
+}
+header li.settings .settingsMenu li:hover i {
+  color: white;
+}
+header li.settings .settingsMenu li i {
+  color: #242424;
+}
+header li.settings .settingsMenu div {
+  display: none;
+  background-color: #bab7b1;
+}
+header li.settings .settingsMenu div article {
+  color: white;
+  padding: 2rem 2.5rem;
+}
+header li.settings .settingsMenu div article:hover {
+  background-color: #686b6d;
+}
+header li.settings .settingsMenu i {
+  font-size: 1.7rem;
+  margin-right: 1rem;
+}
+header li.icons i {
+  color: white;
+  font-size: 3rem;
 }/*# sourceMappingURL=header.css.map */
