@@ -1461,13 +1461,13 @@ body.theme.light .modal .modalBackground {
 body.theme.light .modal .modalContainer {
   height: 90vh;
   z-index: 10;
-  background-color: #e8e8e8;
+  background-color: #fefefe;
   border-radius: 30px;
   position: absolute;
   top: 5%;
 }
 body.theme.light .modal .modalContainer i,
-body.theme.light .modal .modalContainer .addTask,
+body.theme.light .modal .modalContainer .modalBottom,
 body.theme.light .modal .modalContainer select,
 body.theme.light .modal .modalContainer .upload {
   cursor: pointer;
@@ -1478,7 +1478,7 @@ body.theme.light .modal .modalContainer input.empty {
   outline: none;
 }
 body.theme.light .modal .modalContainer .taskName,
-body.theme.light .modal .modalContainer .addTask {
+body.theme.light .modal .modalContainer .modalBottom {
   text-align: center;
   background-color: #bababa;
   padding: 2rem 3rem;
@@ -1570,9 +1570,10 @@ body.theme.light .modal .modalContainer .content .priority select option {
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 body.theme.light .modal .modalContainer .content .progressBarContainer {
+  margin-bottom: 1.5rem;
   border-radius: 30px;
   display: block;
-  background-color: #e7e4dd;
+  background-color: #e8e8e8;
 }
 body.theme.light .modal .modalContainer .content .progressBar {
   display: block;
@@ -1585,21 +1586,21 @@ body.theme.light .modal .modalContainer .content .title {
   font-size: 1.9rem;
   margin-right: 2rem;
 }
-body.theme.light .modal .modalContainer .addTask {
+body.theme.light .modal .modalContainer .modalBottom {
   cursor: pointer;
   width: 100%;
   position: inherit;
   bottom: 0;
   border-radius: 0 0 20px 20px;
 }
-body.theme.light .modal .modalContainer .addTask .text {
+body.theme.light .modal .modalContainer .modalBottom .text {
   font-size: 1.6rem;
 }
-body.theme.light .modal .modalContainer .addTask i {
+body.theme.light .modal .modalContainer .modalBottom i {
   font-size: 2rem;
   margin-right: 1rem;
 }
-body.theme.light .modal .modalContainer .addTask:hover {
+body.theme.light .modal .modalContainer .modalBottom:hover {
   background-color: #a19fa1;
 }
 body.theme.dark {
@@ -2003,13 +2004,13 @@ body.theme.dark .modal .modalBackground {
 body.theme.dark .modal .modalContainer {
   height: 90vh;
   z-index: 10;
-  background-color: #e7e4dd;
+  background-color: #a09d9d;
   border-radius: 30px;
   position: absolute;
   top: 5%;
 }
 body.theme.dark .modal .modalContainer i,
-body.theme.dark .modal .modalContainer .addTask,
+body.theme.dark .modal .modalContainer .modalBottom,
 body.theme.dark .modal .modalContainer select,
 body.theme.dark .modal .modalContainer .upload {
   cursor: pointer;
@@ -2020,7 +2021,7 @@ body.theme.dark .modal .modalContainer input.empty {
   outline: none;
 }
 body.theme.dark .modal .modalContainer .taskName,
-body.theme.dark .modal .modalContainer .addTask {
+body.theme.dark .modal .modalContainer .modalBottom {
   text-align: center;
   background-color: #2d2d2d;
   padding: 2rem 3rem;
@@ -2112,6 +2113,7 @@ body.theme.dark .modal .modalContainer .content .priority select option {
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 body.theme.dark .modal .modalContainer .content .progressBarContainer {
+  margin-bottom: 1.5rem;
   border-radius: 30px;
   display: block;
   background-color: #e7e4dd;
@@ -2127,20 +2129,20 @@ body.theme.dark .modal .modalContainer .content .title {
   font-size: 1.9rem;
   margin-right: 2rem;
 }
-body.theme.dark .modal .modalContainer .addTask {
+body.theme.dark .modal .modalContainer .modalBottom {
   cursor: pointer;
   width: 100%;
   position: inherit;
   bottom: 0;
   border-radius: 0 0 20px 20px;
 }
-body.theme.dark .modal .modalContainer .addTask .text {
+body.theme.dark .modal .modalContainer .modalBottom .text {
   font-size: 1.6rem;
 }
-body.theme.dark .modal .modalContainer .addTask i {
+body.theme.dark .modal .modalContainer .modalBottom i {
   font-size: 2rem;
   margin-right: 1rem;
 }
-body.theme.dark .modal .modalContainer .addTask:hover {
+body.theme.dark .modal .modalContainer .modalBottom:hover {
   background-color: #111010;
 }/*# sourceMappingURL=styles.css.map */

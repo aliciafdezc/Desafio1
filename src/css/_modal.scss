@@ -44,14 +44,14 @@
         .modalContainer {
             height: 90vh;
             z-index: 10;
-            background-color: map.get($theme, "secondary");
+            background-color: map.get($theme, "primary");
             border-radius: 30px;
             position: absolute;
             top: 5%;
 
             i,
-            .addTask,
-            select,
+            .modalBottom,
+            select, 
             .upload {
                 cursor: pointer;
             }
@@ -63,7 +63,7 @@
             }
 
             .taskName,
-            .addTask {
+            .modalBottom {
                 text-align: center;
                 background-color: map.get($theme, "accentLight");
                 padding: 2rem 3rem;
@@ -179,9 +179,10 @@
                 }
 
                 .progressBarContainer {
+                    margin-bottom: 1.5rem;
                     border-radius: 30px;
                     display: block;
-                    background-color:  map.get($generalColors, "backgroundDarker");
+                    background-color:  map.get($theme, "secondary");
                 }
 
                 .progressBar {
@@ -198,7 +199,7 @@
                 }
             }
 
-            .addTask {
+            .modalBottom {
                 cursor: pointer;
                 width: 100%;
                 position: inherit;
