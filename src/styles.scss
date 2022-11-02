@@ -3,21 +3,21 @@
         './css/footer', './css/horizontalMenu', './css/panels', './css/tasks', './css/modal';
 
 
-
-.s-one.column,
-.s-one.columns                    { width: 4.66666666667%; }
-.s-two.columns                    { width: 13.3333333333%; }
-.s-three.columns                  { width: 22%;            }
-.s-four.columns                   { width: 30.6666666667%; }
-.s-five.columns                   { width: 39.3333333333%; }
-.s-six.columns                    { width: 48%;            }
-.s-seven.columns                  { width: 56.6666666667%; }
-.s-eight.columns                  { width: 65.3333333333%; }
-.s-nine.columns                   { width: 74.0%;          }
-.s-ten.columns                    { width: 82.6666666667%; }
-.s-eleven.columns                 { width: 91.3333333333%; }
-.s-twelve.columns                 { width: 100%; margin-left: 0; }
-
+@media (max-width: 750px) {
+    .s-one.column,
+    .s-one.columns                    { width: 4.66666666667%; }
+    .s-two.columns                    { width: 13.3333333333%; }
+    .s-three.columns                  { width: 22%;            }
+    .s-four.columns                   { width: 30.6666666667%; }
+    .s-five.columns                   { width: 39.3333333333%; }
+    .s-six.columns                    { width: 48%;            }
+    .s-seven.columns                  { width: 56.6666666667%; }
+    .s-eight.columns                  { width: 65.3333333333%; }
+    .s-nine.columns                   { width: 74.0%;          }
+    .s-ten.columns                    { width: 82.6666666667%; }
+    .s-eleven.columns                 { width: 91.3333333333%; }
+    .s-twelve.columns                 { width: 100%; margin-left: 0; }
+}
 @media (min-width: 750px) {
     .container { width: 80%; }
     .column, .columns { margin-left: 4%;}
@@ -109,8 +109,6 @@ body {
         @include footer($lightTheme, $generalColors);
         @include header($lightTheme, $generalColors);
         @include horizontalMenu($lightTheme, $generalColors);
-        
-        
         @include panels($lightTheme, $generalColors);
         @include tasks($lightTheme, $generalColors);
         @include modal($lightTheme, $generalColors);
@@ -122,8 +120,6 @@ body {
         @include footer($darkTheme, $generalColors);
         @include header($darkTheme, $generalColors);
         @include horizontalMenu($darkTheme, $generalColors);
-        
-        
         @include panels($darkTheme, $generalColors);
         @include tasks($darkTheme, $generalColors);
         @include modal($darkTheme, $generalColors);

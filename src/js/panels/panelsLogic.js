@@ -2,18 +2,19 @@
 import { panelList } from './../..';
 import { createTaskHtml, addEvents } from "./../tasks";
 
-const panelSize = 'four';
+const panelSizeBig = 'b-four';
+const panelSizeSmall = 's-twelve';
 const panelsContainer = document.querySelector('.panelsContainer.row');
 export let clickedPanel;
 
 
 export const createPanel = (panel) => {
     let hmtlPanel = `
-    <div class="panel columns ${(panelSize)}" data-id="${(panel.id)}">
+    <div class="panel columns ${(panelSizeSmall)} ${(panelSizeBig)}" data-id="${(panel.id)}">
         <div class="row">
             <div class="title columns twelve">${(panel.name)}</div>
             <div class="tasks columns twelve">${(panel.taskList)}</div>
-            <div class="addTask columns twelve">
+            <div class="addTask columns ${(panelSizeSmall)}">
                 <i class="fa fa-plus-circle add"></i>
                 <span class="add">NEW TASK</span>
             </div>

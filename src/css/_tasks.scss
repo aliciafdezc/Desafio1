@@ -2,7 +2,7 @@
      
     .taskContainer {
         background: white;
-        border-radius:15px;
+        border-radius: 15px;
         margin-bottom: 1rem;
         z-index: 30;  
 
@@ -57,6 +57,7 @@
             }
 
             .subtasksContainer {
+                width: fit-content;
                 display: none;
                 line-height: 0;
                 &.visible { display: block; }

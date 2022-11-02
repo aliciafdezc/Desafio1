@@ -2,9 +2,14 @@
 
     @media (max-width: 550px) {
         .modalContainer {
-            width: 90vw;
-            left: 5%;
-
+            width: 95vw;
+            left: 2.5%;
+            .content {
+                padding: 0;
+                i.check {
+                    font-size: 1.7rem;
+                }
+            }
         }
     }
 
@@ -13,11 +18,24 @@
         .modalContainer {
             width: 60vw;
             left: 20%;
+            .content {
+                padding: 2rem 3rem;
+                i.check {
+                    font-size: 2rem;
+                }
+            }
         }
     }
 
 
     @media (min-width: 735px) {
+        .modalContainer {
+            width: 50vw;
+            left: 25%;
+        }
+    }
+
+    @media (min-width: 1000px) {
         .modalContainer {
             width: 40vw;
             left: 30%;
@@ -42,7 +60,7 @@
         }
 
         .modalContainer {
-            height: 90vh;
+            height: fit-content;
             z-index: 10;
             background-color: map.get($theme, "primary");
             border-radius: 30px;
@@ -68,7 +86,6 @@
                 background-color: map.get($theme, "accentLight");
                 padding: 2rem 3rem;
                 color: map.get($generalColors, "fontColorLight");
-                height: 10%;
             }
 
             .taskName {
@@ -86,12 +103,10 @@
             }
 
             .content {
-                padding: 2rem 3rem;
                 background-color:  map.get($theme, "primary");
                 color: map.get($generalColors, "fontColorDark");
                 overflow-y: scroll;
-                height: 80%;
-
+                height: 70vh;
                 div.img {
                     height: auto; // to wrap floated children
                     overflow: auto; // to wrap floated children
@@ -145,21 +160,9 @@
                 }
 
                 .checklist {
-                    input {
-                        margin-left: 0.5rem;
-                    }
-
-                    i.check {
-                        font-size: 2rem;
-                    }
-
-                    .container {
-                        margin: 0 0 1.5rem 0;
-
-                        i.check {
-                            margin-right: 1.3rem;
-                        }
-                    }
+                    .container { margin: 0 0 1.5rem 0; }
+                    input, button { margin-left: 0.5rem; }
+                    
                 }
 
                 .priority {
@@ -202,8 +205,6 @@
             .modalBottom {
                 cursor: pointer;
                 width: 100%;
-                position: inherit;
-                bottom: 0;
                 border-radius: 0 0 20px 20px;
 
                 .text {

@@ -926,56 +926,46 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
-.s-one.column,
+@media (max-width: 750px) {
+  .s-one.column,
 .s-one.columns {
-  width: 4.6666666667%;
+    width: 4.6666666667%;
+  }
+  .s-two.columns {
+    width: 13.3333333333%;
+  }
+  .s-three.columns {
+    width: 22%;
+  }
+  .s-four.columns {
+    width: 30.6666666667%;
+  }
+  .s-five.columns {
+    width: 39.3333333333%;
+  }
+  .s-six.columns {
+    width: 48%;
+  }
+  .s-seven.columns {
+    width: 56.6666666667%;
+  }
+  .s-eight.columns {
+    width: 65.3333333333%;
+  }
+  .s-nine.columns {
+    width: 74%;
+  }
+  .s-ten.columns {
+    width: 82.6666666667%;
+  }
+  .s-eleven.columns {
+    width: 91.3333333333%;
+  }
+  .s-twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
 }
-
-.s-two.columns {
-  width: 13.3333333333%;
-}
-
-.s-three.columns {
-  width: 22%;
-}
-
-.s-four.columns {
-  width: 30.6666666667%;
-}
-
-.s-five.columns {
-  width: 39.3333333333%;
-}
-
-.s-six.columns {
-  width: 48%;
-}
-
-.s-seven.columns {
-  width: 56.6666666667%;
-}
-
-.s-eight.columns {
-  width: 65.3333333333%;
-}
-
-.s-nine.columns {
-  width: 74%;
-}
-
-.s-ten.columns {
-  width: 82.6666666667%;
-}
-
-.s-eleven.columns {
-  width: 91.3333333333%;
-}
-
-.s-twelve.columns {
-  width: 100%;
-  margin-left: 0;
-}
-
 @media (min-width: 750px) {
   .container {
     width: 80%;
@@ -1063,20 +1053,6 @@ body ul {
 body.theme.light {
   font-family: fontLight;
   background-color: #fefefe;
-  /* Scrollbar  chrome */
-  /* .panel::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  .panel::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-  }
-
-  .panel::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-  } */
 }
 body.theme.light footer {
   background-color: #a19fa1;
@@ -1278,7 +1254,7 @@ body.theme.light nav.horizontalMenu {
 }
 body.theme.light nav.horizontalMenu i {
   font-size: 2rem;
-  padding: 1em 0 1em 1em;
+  padding: 1em 0;
 }
 body.theme.light nav.horizontalMenu .projectListContainer {
   height: 100%;
@@ -1361,6 +1337,17 @@ body.theme.light .panelsContainer.row .panel .addTask i {
   font-size: 2rem;
   margin-right: 1rem;
 }
+@media (max-width: 750px) {
+  body.theme.light .panelsContainer.row {
+    padding: 3rem 2rem;
+  }
+  body.theme.light .panelsContainer.row .panel {
+    margin-bottom: 1rem;
+  }
+  body.theme.light .panelsContainer.row .panel .title, body.theme.light .panelsContainer.row .panel .addTask {
+    padding: 1.5rem 2.5rem;
+  }
+}
 body.theme.light .taskContainer {
   background: white;
   border-radius: 15px;
@@ -1417,6 +1404,9 @@ body.theme.light .taskContainer .content .subtasksDropDown i {
   margin-right: 0.5rem;
 }
 body.theme.light .taskContainer .content .subtasksContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: none;
   line-height: 0;
 }
@@ -1428,8 +1418,14 @@ body.theme.light .taskContainer .content .subtasksContainer i {
 }
 @media (max-width: 550px) {
   body.theme.light .modalContainer {
-    width: 90vw;
-    left: 5%;
+    width: 95vw;
+    left: 2.5%;
+  }
+  body.theme.light .modalContainer .content {
+    padding: 0;
+  }
+  body.theme.light .modalContainer .content i.check {
+    font-size: 1.7rem;
   }
 }
 @media (min-width: 550px) {
@@ -1437,8 +1433,20 @@ body.theme.light .taskContainer .content .subtasksContainer i {
     width: 60vw;
     left: 20%;
   }
+  body.theme.light .modalContainer .content {
+    padding: 2rem 3rem;
+  }
+  body.theme.light .modalContainer .content i.check {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 735px) {
+  body.theme.light .modalContainer {
+    width: 50vw;
+    left: 25%;
+  }
+}
+@media (min-width: 1000px) {
   body.theme.light .modalContainer {
     width: 40vw;
     left: 30%;
@@ -1459,7 +1467,9 @@ body.theme.light .modal .modalBackground {
   left: 0;
 }
 body.theme.light .modal .modalContainer {
-  height: 90vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   z-index: 10;
   background-color: #fefefe;
   border-radius: 30px;
@@ -1483,7 +1493,6 @@ body.theme.light .modal .modalContainer .modalBottom {
   background-color: #bababa;
   padding: 2rem 3rem;
   color: #ffffff;
-  height: 10%;
 }
 body.theme.light .modal .modalContainer .taskName {
   border-radius: 20px 20px 0 0;
@@ -1497,11 +1506,10 @@ body.theme.light .modal .modalContainer .taskName .close {
   font-size: 2rem;
 }
 body.theme.light .modal .modalContainer .content {
-  padding: 2rem 3rem;
   background-color: #fefefe;
   color: #111010;
   overflow-y: scroll;
-  height: 80%;
+  height: 70vh;
 }
 body.theme.light .modal .modalContainer .content div.img {
   height: auto;
@@ -1544,17 +1552,11 @@ body.theme.light .modal .modalContainer .content > div p {
 body.theme.light .modal .modalContainer .content .label > div {
   margin-left: 0;
 }
-body.theme.light .modal .modalContainer .content .checklist input {
-  margin-left: 0.5rem;
-}
-body.theme.light .modal .modalContainer .content .checklist i.check {
-  font-size: 2rem;
-}
 body.theme.light .modal .modalContainer .content .checklist .container {
   margin: 0 0 1.5rem 0;
 }
-body.theme.light .modal .modalContainer .content .checklist .container i.check {
-  margin-right: 1.3rem;
+body.theme.light .modal .modalContainer .content .checklist input, body.theme.light .modal .modalContainer .content .checklist button {
+  margin-left: 0.5rem;
 }
 body.theme.light .modal .modalContainer .content .priority select {
   background-color: #bababa;
@@ -1589,8 +1591,6 @@ body.theme.light .modal .modalContainer .content .title {
 body.theme.light .modal .modalContainer .modalBottom {
   cursor: pointer;
   width: 100%;
-  position: inherit;
-  bottom: 0;
   border-radius: 0 0 20px 20px;
 }
 body.theme.light .modal .modalContainer .modalBottom .text {
@@ -1606,20 +1606,6 @@ body.theme.light .modal .modalContainer .modalBottom:hover {
 body.theme.dark {
   font-family: fontDark;
   background-color: #a09d9d;
-  /* Scrollbar  chrome */
-  /* .panel::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  .panel::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-  }
-
-  .panel::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-  } */
 }
 body.theme.dark footer {
   background-color: #111010;
@@ -1821,7 +1807,7 @@ body.theme.dark nav.horizontalMenu {
 }
 body.theme.dark nav.horizontalMenu i {
   font-size: 2rem;
-  padding: 1em 0 1em 1em;
+  padding: 1em 0;
 }
 body.theme.dark nav.horizontalMenu .projectListContainer {
   height: 100%;
@@ -1904,6 +1890,17 @@ body.theme.dark .panelsContainer.row .panel .addTask i {
   font-size: 2rem;
   margin-right: 1rem;
 }
+@media (max-width: 750px) {
+  body.theme.dark .panelsContainer.row {
+    padding: 3rem 2rem;
+  }
+  body.theme.dark .panelsContainer.row .panel {
+    margin-bottom: 1rem;
+  }
+  body.theme.dark .panelsContainer.row .panel .title, body.theme.dark .panelsContainer.row .panel .addTask {
+    padding: 1.5rem 2.5rem;
+  }
+}
 body.theme.dark .taskContainer {
   background: white;
   border-radius: 15px;
@@ -1960,6 +1957,9 @@ body.theme.dark .taskContainer .content .subtasksDropDown i {
   margin-right: 0.5rem;
 }
 body.theme.dark .taskContainer .content .subtasksContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: none;
   line-height: 0;
 }
@@ -1971,8 +1971,14 @@ body.theme.dark .taskContainer .content .subtasksContainer i {
 }
 @media (max-width: 550px) {
   body.theme.dark .modalContainer {
-    width: 90vw;
-    left: 5%;
+    width: 95vw;
+    left: 2.5%;
+  }
+  body.theme.dark .modalContainer .content {
+    padding: 0;
+  }
+  body.theme.dark .modalContainer .content i.check {
+    font-size: 1.7rem;
   }
 }
 @media (min-width: 550px) {
@@ -1980,8 +1986,20 @@ body.theme.dark .taskContainer .content .subtasksContainer i {
     width: 60vw;
     left: 20%;
   }
+  body.theme.dark .modalContainer .content {
+    padding: 2rem 3rem;
+  }
+  body.theme.dark .modalContainer .content i.check {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 735px) {
+  body.theme.dark .modalContainer {
+    width: 50vw;
+    left: 25%;
+  }
+}
+@media (min-width: 1000px) {
   body.theme.dark .modalContainer {
     width: 40vw;
     left: 30%;
@@ -2002,7 +2020,9 @@ body.theme.dark .modal .modalBackground {
   left: 0;
 }
 body.theme.dark .modal .modalContainer {
-  height: 90vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   z-index: 10;
   background-color: #a09d9d;
   border-radius: 30px;
@@ -2026,7 +2046,6 @@ body.theme.dark .modal .modalContainer .modalBottom {
   background-color: #2d2d2d;
   padding: 2rem 3rem;
   color: #ffffff;
-  height: 10%;
 }
 body.theme.dark .modal .modalContainer .taskName {
   border-radius: 20px 20px 0 0;
@@ -2040,11 +2059,10 @@ body.theme.dark .modal .modalContainer .taskName .close {
   font-size: 2rem;
 }
 body.theme.dark .modal .modalContainer .content {
-  padding: 2rem 3rem;
   background-color: #a09d9d;
   color: #111010;
   overflow-y: scroll;
-  height: 80%;
+  height: 70vh;
 }
 body.theme.dark .modal .modalContainer .content div.img {
   height: auto;
@@ -2087,17 +2105,11 @@ body.theme.dark .modal .modalContainer .content > div p {
 body.theme.dark .modal .modalContainer .content .label > div {
   margin-left: 0;
 }
-body.theme.dark .modal .modalContainer .content .checklist input {
-  margin-left: 0.5rem;
-}
-body.theme.dark .modal .modalContainer .content .checklist i.check {
-  font-size: 2rem;
-}
 body.theme.dark .modal .modalContainer .content .checklist .container {
   margin: 0 0 1.5rem 0;
 }
-body.theme.dark .modal .modalContainer .content .checklist .container i.check {
-  margin-right: 1.3rem;
+body.theme.dark .modal .modalContainer .content .checklist input, body.theme.dark .modal .modalContainer .content .checklist button {
+  margin-left: 0.5rem;
 }
 body.theme.dark .modal .modalContainer .content .priority select {
   background-color: #2d2d2d;
@@ -2132,8 +2144,6 @@ body.theme.dark .modal .modalContainer .content .title {
 body.theme.dark .modal .modalContainer .modalBottom {
   cursor: pointer;
   width: 100%;
-  position: inherit;
-  bottom: 0;
   border-radius: 0 0 20px 20px;
 }
 body.theme.dark .modal .modalContainer .modalBottom .text {
