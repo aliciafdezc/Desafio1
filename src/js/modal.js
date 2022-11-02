@@ -79,6 +79,7 @@ const addSubtask = () => {
         addEventsSubtask(container.lastChild);
         subtaskList.push(subtask);
         subtaskInput.classList.remove('empty');
+        showSubtasksProgress(subtaskList);
     } else {
         subtaskInput.classList.add('empty');
     }
@@ -94,6 +95,7 @@ const addEventsSubtask = (container) => {
         subtask.isCompleted = !subtask.isCompleted;
         check.classList.toggle('fa-square-o');
         check.classList.toggle('fa-check-square-o');
+        showSubtasksProgress(subtaskList);
     });
     deleteSubtask.addEventListener('click', (e) => {
         subtaskList = subtaskList.filter( subtask => subtask.id != id );
@@ -135,8 +137,13 @@ export const setModal = (task) => {
         container.append(createSubtaskHtml(subtask, iconClass));
         addEventsSubtask(container.lastChild);
     });
-    const completed = task.subtasks.filter( subtask => subtask.isCompleted );
-    const barProgress = 100 * completed.length / task.subtasks.length ;
-    modal.querySelector('.progressBar').style.width = barProgress + '%';
+    showSubtasksProgress(task.subtasks);
+    
     modal.querySelector('.priority select').value = task.priority;
 }
+
+const showSubtasksProgress = (subtasksList) => {
+    const completed = subtasksList.filter( subtask => subtask.isCompleted );
+    const barProgress = 100 * completed.length / subtasksList.length ;
+    modal.querySelector('.progressBar').style.width = barProgress + '%';
+};
