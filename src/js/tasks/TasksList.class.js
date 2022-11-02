@@ -12,6 +12,7 @@ export class TasksList {
        this.saveLocalStorage(); 
     }
 
+    
     saveLocalStorage() {
         localStorage.setItem('tasks', JSON.stringify(this.tasks));
     }

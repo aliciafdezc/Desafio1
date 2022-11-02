@@ -1416,6 +1416,9 @@ body.theme.light .taskContainer .content .subtasksContainer.visible {
 body.theme.light .taskContainer .content .subtasksContainer i {
   margin: 0.5rem 1rem 0 0.5em;
 }
+body.theme.light .taskContainer .content .hide {
+  display: none;
+}
 @media (max-width: 550px) {
   body.theme.light .modalContainer {
     width: 95vw;
@@ -1505,6 +1508,9 @@ body.theme.light .modal .modalContainer .taskName .name {
 body.theme.light .modal .modalContainer .taskName .close {
   font-size: 2rem;
 }
+body.theme.light .modal .modalContainer .taskName .close:hover {
+  color: #ea1b59;
+}
 body.theme.light .modal .modalContainer .content {
   background-color: #fefefe;
   color: #111010;
@@ -1523,7 +1529,7 @@ body.theme.light .modal .modalContainer .content label {
   font-weight: normal;
   font-size: 1.3rem;
   color: #ffffff;
-  background-color: #bababa;
+  background-color: #a19fa1;
   border-radius: 30px;
 }
 body.theme.light .modal .modalContainer .content button i,
@@ -1538,7 +1544,7 @@ body.theme.light .modal .modalContainer .content button {
   text-transform: none;
 }
 body.theme.light .modal .modalContainer .content button:hover {
-  background-color: #a19fa1;
+  background-color: #bababa;
 }
 body.theme.light .modal .modalContainer .content input {
   height: 3.5rem;
@@ -1549,22 +1555,30 @@ body.theme.light .modal .modalContainer .content > div {
 body.theme.light .modal .modalContainer .content > div p {
   margin-bottom: 1rem;
 }
-body.theme.light .modal .modalContainer .content .label > div {
-  margin-left: 0;
-}
 body.theme.light .modal .modalContainer .content .checklist .container {
+  padding: 0;
   margin: 0 0 1.5rem 0;
+}
+body.theme.light .modal .modalContainer .content .checklist .container .delete {
+  margin-left: 3rem;
+  color: #d0d0d0;
+}
+body.theme.light .modal .modalContainer .content .checklist .container .delete:hover {
+  color: #ea1b59;
+}
+body.theme.light .modal .modalContainer .content .checklist .container span {
+  margin-left: 1rem;
 }
 body.theme.light .modal .modalContainer .content .checklist input, body.theme.light .modal .modalContainer .content .checklist button {
   margin-left: 0.5rem;
 }
 body.theme.light .modal .modalContainer .content .priority select {
-  background-color: #bababa;
+  background-color: #a19fa1;
   color: #ffffff;
   border: none;
 }
 body.theme.light .modal .modalContainer .content .priority select:hover {
-  background-color: #a19fa1;
+  background-color: #bababa;
 }
 body.theme.light .modal .modalContainer .content .priority select option {
   border: none;
@@ -1969,6 +1983,9 @@ body.theme.dark .taskContainer .content .subtasksContainer.visible {
 body.theme.dark .taskContainer .content .subtasksContainer i {
   margin: 0.5rem 1rem 0 0.5em;
 }
+body.theme.dark .taskContainer .content .hide {
+  display: none;
+}
 @media (max-width: 550px) {
   body.theme.dark .modalContainer {
     width: 95vw;
@@ -2058,6 +2075,9 @@ body.theme.dark .modal .modalContainer .taskName .name {
 body.theme.dark .modal .modalContainer .taskName .close {
   font-size: 2rem;
 }
+body.theme.dark .modal .modalContainer .taskName .close:hover {
+  color: #ea1b59;
+}
 body.theme.dark .modal .modalContainer .content {
   background-color: #a09d9d;
   color: #111010;
@@ -2076,7 +2096,7 @@ body.theme.dark .modal .modalContainer .content label {
   font-weight: normal;
   font-size: 1.3rem;
   color: #ffffff;
-  background-color: #2d2d2d;
+  background-color: #111010;
   border-radius: 30px;
 }
 body.theme.dark .modal .modalContainer .content button i,
@@ -2091,7 +2111,7 @@ body.theme.dark .modal .modalContainer .content button {
   text-transform: none;
 }
 body.theme.dark .modal .modalContainer .content button:hover {
-  background-color: #111010;
+  background-color: #2d2d2d;
 }
 body.theme.dark .modal .modalContainer .content input {
   height: 3.5rem;
@@ -2102,22 +2122,30 @@ body.theme.dark .modal .modalContainer .content > div {
 body.theme.dark .modal .modalContainer .content > div p {
   margin-bottom: 1rem;
 }
-body.theme.dark .modal .modalContainer .content .label > div {
-  margin-left: 0;
-}
 body.theme.dark .modal .modalContainer .content .checklist .container {
+  padding: 0;
   margin: 0 0 1.5rem 0;
+}
+body.theme.dark .modal .modalContainer .content .checklist .container .delete {
+  margin-left: 3rem;
+  color: #525252;
+}
+body.theme.dark .modal .modalContainer .content .checklist .container .delete:hover {
+  color: #ea1b59;
+}
+body.theme.dark .modal .modalContainer .content .checklist .container span {
+  margin-left: 1rem;
 }
 body.theme.dark .modal .modalContainer .content .checklist input, body.theme.dark .modal .modalContainer .content .checklist button {
   margin-left: 0.5rem;
 }
 body.theme.dark .modal .modalContainer .content .priority select {
-  background-color: #2d2d2d;
+  background-color: #111010;
   color: #ffffff;
   border: none;
 }
 body.theme.dark .modal .modalContainer .content .priority select:hover {
-  background-color: #111010;
+  background-color: #2d2d2d;
 }
 body.theme.dark .modal .modalContainer .content .priority select option {
   border: none;

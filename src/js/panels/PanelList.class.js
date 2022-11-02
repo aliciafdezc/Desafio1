@@ -6,7 +6,10 @@ export class PanelList {
         this.loadLocalStorage();
     }
 
-
+    save () {
+        saveLocalStorage();
+    }
+    
     saveLocalStorage() {
         localStorage.setItem('panels', JSON.stringify(this.panels));
     }

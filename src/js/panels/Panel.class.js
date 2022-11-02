@@ -15,13 +15,17 @@ export class Panel {
 
     addTask(task) {
        this.taskList.push(task);
-      /*  this.saveLocalStorage(); */
+       this.saveLocalStorage();
     }
 
-    
+    updateTask(newTask) {
+        this.taskList.splice(this.taskList.indexOf(newTask), 1, newTask);
+        this.saveLocalStorage();
+    }
+
     deleteTask(id) {
         this.taskList = this.taskList.filter( task => task.id != id );
-        /* this.saveLocalStorage(); */
+        this.saveLocalStorage();
     }
 
     getTask(id) {
@@ -30,19 +34,15 @@ export class Panel {
 
     saveLocalStorage() {
         localStorage.setItem('panel' + this.id, JSON.stringify(this));
-        /* console.log(localStorage); */
     }
 
 
     /* loadLocalStorage() {
-        this.panels = (localStorage.getItem('panels')) 
-                        ? JSON.parse(localStorage.getItem('panels'))
-                        : [ new Panel([], 'TO DO', 1), 
-                            new Panel([], 'IN PROGRESS', 2),
-                            new Panel([], 'DONE', 3)
-                        ];
+        this = (localStorage.getItem('panel')) 
+                        ? JSON.parse(localStorage.getItem('panel'))
+                        : [  ];
 
-        this.panels = this.panels.map( Panel.fromJSON );
+        this = this.map( Panel.fromJSON );
     } */
 }
 

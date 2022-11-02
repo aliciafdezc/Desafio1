@@ -99,6 +99,9 @@
 
                 .close {
                     font-size: 2rem;
+                    &:hover {
+                        color: map.get($generalColors, "red");
+                    }
                 }
             }
 
@@ -121,7 +124,7 @@
                     font-weight: normal;
                     font-size: 1.3rem;
                     color: map.get($generalColors, "fontColorLight");
-                    background-color: map.get($theme, "accentLight");
+                    background-color: map.get($theme, "accentDark");
                     border-radius: 30px;
 
                     i {
@@ -137,7 +140,7 @@
                     text-transform: none;
 
                     &:hover {
-                        background-color: map.get($theme, "accentDark");
+                        background-color: map.get($theme, "accentLight");
                     }
 
                 }
@@ -153,25 +156,32 @@
 
                     padding: 2.5rem 3rem;
                 }
-
-                .label>div {
-                    margin-left: 0;
-
-                }
-
                 .checklist {
-                    .container { margin: 0 0 1.5rem 0; }
+                    .container { 
+                        padding: 0;
+                        margin: 0 0 1.5rem 0; 
+                        .delete {
+                            margin-left: 3rem;
+                            color: map.get($theme, "tertiary");
+                            &:hover {
+                               color: map.get($generalColors, "red");
+                            }
+                        }
+                        span {
+                            margin-left: 1rem;
+                        }
+                    }
                     input, button { margin-left: 0.5rem; }
                     
                 }
 
                 .priority {
                     select {
-                        background-color: map.get($theme, "accentLight");
+                        background-color: map.get($theme, "accentDark");
                         color: map.get($generalColors, "fontColorLight");
                         border: none;
                         &:hover {
-                            background-color: map.get($theme, "accentDark");
+                            background-color: map.get($theme, "accentLight");
                         }
                         option {
                             border: none;

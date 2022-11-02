@@ -16,14 +16,15 @@
                 border-radius: 34px;
                 color:white;
                 &.low {
-                    background-color: map.get($generalColors, "priorityLow");
+                    background-color: map.get($generalColors, "green");
                 }
                 &.medium {
-                    background-color: map.get($generalColors, "priorityMedium");
+                    background-color: map.get($generalColors, "yellow");
                 }
                 &.high { 
-                    background-color: map.get($generalColors, "priorityHigh");
+                    background-color: map.get($generalColors, "red");
                 }
+               
             } 
 
             .iconsContainer i {
@@ -31,7 +32,7 @@
                 color: map.get($generalColors, "tertiary");
                 padding: .6rem 0 0 .7rem;
                 &:hover {
-                    color: map.get($generalColors, "priorityHigh");
+                    color: map.get($generalColors, "red");
                 }
             }
 
@@ -62,6 +63,10 @@
                 line-height: 0;
                 &.visible { display: block; }
                 i { margin: .5rem 1rem 0 .5em; }
+            }
+            
+            .hide {
+                display: none;
             }
         }
     }

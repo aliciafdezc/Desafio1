@@ -15,6 +15,10 @@ export class Task {
         this.id = new Date().getTime();
     }
 
+    emptyList() {
+        this.subtasks = [];
+    }
+    
     /**
      * @param {any} name
      */
