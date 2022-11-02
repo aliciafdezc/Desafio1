@@ -1,12 +1,7 @@
-@import './css-skeleton/normalize.css', './css-skeleton/skeleton.css', './footer/footer.css', 
-        './header/header.css', './panels/panels.css', './panels/tasksModal/tasksModal.css',
-        './panels/tasks/tasks.css', './header/horizontalMenu/horizontalMenu.css'; 
+@use "sass:map";
+@import './css/css-skeleton/normalize', './css/css-skeleton/skeleton', './css/header',
+        './css/footer', './css/horizontalMenu', './css/panels', './css/tasks', './css/modal';
 
-
-@font-face {
-    font-family: primaryFont;
-    src: url(./assets/fonts/GOTHIC.TTF);
-}
 
 
 .s-one.column,
@@ -44,6 +39,46 @@
     .b-twelve.columns                 { width: 100%; margin-left: 0; }
 }
 
+@font-face {
+    font-family: fontLight;
+    src: url(./assets/fonts/GOTHIC.TTF);
+}
+
+
+@font-face {
+    font-family: fontDark;
+    src: url(./assets/fonts/Montserrat-Light.ttf);
+}
+
+$generalColors: (
+    "fontColorDark": #111010,
+    "fontColorMedium": #3f3f3f,
+    "fontColorLight": #ffffff,
+    "background": #ffffff,
+    "backgroundDarker": #e7e4dd,
+    "priorityLow": #66e25f,
+    "priorityMedium": #ffc423,
+    "priorityHigh": #ea1b59,
+);
+
+$lightTheme: (
+    "primary": #fefefe,
+    "secondary": #e8e8e8,
+    "tertiary": #d0d0d0,
+    "accentLight": #bababa,
+    "accentDark": #a19fa1,
+    "font": fontLight,
+);
+
+$darkTheme: (
+    "primary": #a09d9d ,
+    "secondary": #e7e4dd,
+    "tertiary": #525252,
+    "accentLight": #2d2d2d,
+    "accentDark": #111010,
+    "font": fontDark,
+);
+
 html, body {
     height: 100%;
 }
@@ -57,36 +92,44 @@ footer {
 }
 
 body {
-    font-family: primaryFont;
     display: flex;
     flex-direction: column;
     margin: 0;
-    & * {
+ 
+    * {
         margin: 0;
         box-sizing: border-box;
     }
-    &.theme.light{
-        $principalClaro: #ffffff;
-        $secundarioClaro: #f0eee7;
-        $terciarioClaro: #d8d5cc;
-        $cuaterciarioClaro: #bab7b1;
-    
-        background-color: $principalClaro;     
+
+    ul { list-style: none; }  
+
+    &.theme.light {
+        font-family: map.get($lightTheme,"font");
+        background-color: map.get($lightTheme,"primary");
+        @include footer($lightTheme, $generalColors);
+        @include header($lightTheme, $generalColors);
+        @include horizontalMenu($lightTheme, $generalColors);
+        
+        
+        @include panels($lightTheme, $generalColors);
+        @include tasks($lightTheme, $generalColors);
+        @include modal($lightTheme, $generalColors);
     }
-    &.theme.dark{
-        $principalOscuro: #e7e4dd;
-        $secundarioOscuro: #686b6d;
-        $terciarioOscuro: #242424;
-        $cuaterciarioOscuro: #111010;
     
-    
-        background-color: $secundarioOscuro; 
+    &.theme.dark {
+        font-family: map.get($darkTheme,"font");
+        background-color: map.get($darkTheme,"primary");
+        @include footer($darkTheme, $generalColors);
+        @include header($darkTheme, $generalColors);
+        @include horizontalMenu($darkTheme, $generalColors);
+        
+        
+        @include panels($darkTheme, $generalColors);
+        @include tasks($darkTheme, $generalColors);
+        @include modal($darkTheme, $generalColors);
     }
 }
 
-ul {
-    list-style: none;  
-}
 
 
 

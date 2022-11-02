@@ -1,0 +1,179 @@
+@mixin header($theme, $generalColors) {
+
+    @media (max-width: 480px) {
+        .searchBar input {
+            width: 12em;
+        }
+
+        header {
+            padding: 2em 1.6em;
+
+            & .logo {
+                height: 2.2em;
+            }
+
+            & .u-pull-left li,
+            & .u-pull-left div {
+                margin-left: 1em;
+            }
+        }
+    }
+
+    @media (min-width: 480px) {
+        .searchBar input {
+            width: 20em;
+        }
+
+        header {
+            padding: 2em 3.5em;
+
+            & .logo {
+                height: 2.5em;
+            }
+
+            & li.u-pull-left,
+            & div.u-pull-left {
+                margin-left: 2em;
+            }
+        }
+    }
+
+    header {
+        background-color: map.get($theme, "accentDark");
+        font-size: 0.8em;
+        line-height: 0;
+
+        .searchBar {
+            position: relative;
+
+            input {
+                height: 2.5em;
+                padding: .1em 1.2em .1em 1.2em;
+                border-radius: 34px;
+                background-color: white;
+                border: none;
+
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            button {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 0.45em;
+                right: 0.9em;
+                padding: 0;
+                font-size: 100%;
+                letter-spacing: 0;
+                height: auto;
+                line-height: 0;
+
+                i { /* Magnifying glass */
+                    font-size: 1.5em;
+                    transition: .3s;
+                    color: map.get($theme, "tertiary");
+
+                    &:hover {
+                        color: map.get($theme, "accentDark");
+                    }
+                }
+            }
+        }
+
+        li.profile {
+            position: relative;
+
+            &:hover .settingsMenu,
+            &:hover::before {
+                visibility: visible;
+                transition-delay: 0s;
+            }
+
+            i {
+                color: map.get($generalColors, "fontColorLight");
+                font-size: 3rem;
+            }
+
+            &::before { /*  Dropdown menu triangle */
+                transition: .1s .2s;
+                visibility: hidden;
+                content: ''; /* Required to display content */
+                position: absolute; /* Sets the position absolute to the top div */
+                top: 3.3rem;
+                right: -.3rem; /* position the arrow */
+                width: 0;
+                z-index: 1;
+                height: 0;
+                border-bottom: solid 15px map.get($theme, "tertiary"); /* Creates the arrow pointing up, to change to a notch instead user border-top */
+                border-left: solid 15px transparent; /* Creates triangle effect */
+                border-right: solid 15px transparent; /* Creates triangle effect */
+            }
+
+            .settingsMenu {
+                width: max-content;
+                padding: 1rem 0 1rem 0;
+                z-index: 20;
+                border-radius: 10px;
+                background-color: map.get($theme, "tertiary");
+                transition: .1s .2s;
+                display: block;
+                visibility: hidden;
+                position: absolute;
+                top: 4.2rem;
+                right: -3rem;
+                margin: 0;
+                font-size: 1.4rem;
+                box-shadow: 2px 2px 10px map.get($theme, "accentLight");
+
+                li {
+                    background-color: map.get($theme, "secondary");
+                    padding: 1.5rem 2.5rem;
+                    cursor: pointer;
+                    border-bottom: 1px map.get($theme, "primary") solid;
+
+                    &:hover {
+                        background-color: map.get($theme, "tertiary");
+                        border-color: map.get($theme, "tertiary");
+                        color: map.get($generalColors, "fontColorLight");
+                        font-weight: bold;
+
+                        i {
+                            color: map.get($generalColors, "fontColorLight");
+                        }
+                    }
+
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+
+                    i {
+                        color: map.get($generalColors, "fontColorDark");
+                    }
+                }
+
+                div {
+                    display: none;
+                    background-color: map.get($generalColors, "accentLight");
+
+                    article {
+                        color: map.get($generalColors, "fontColorLight");
+                        padding: 2rem 2.5rem;
+
+                        &:hover {
+                            background-color: map.get($theme, "accentDark");
+                        }
+                    }
+                }
+
+                i {
+                    font-size: 1.7rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

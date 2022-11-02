@@ -1,6 +1,6 @@
 /* import { Task } from '../tasks'; */
-import { panelList } from './..';
-import { createTaskHtml, addEvents } from "./tasks";
+import { panelList } from './../..';
+import { createTaskHtml, addEvents } from "./../tasks";
 
 const panelSize = 'four';
 const panelsContainer = document.querySelector('.panelsContainer.row');
@@ -27,7 +27,7 @@ export const createPanel = (panel) => {
 
 panelsContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) {
-        document.querySelector('.tasksModal').classList.add('visible');
+        document.querySelector('.modal').classList.add('visible');
         clickedPanel = e.target.closest('.panel');
     }   
 });

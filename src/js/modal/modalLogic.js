@@ -1,8 +1,8 @@
 /* import { tasksList } from "../.."; */
 import { Subtask, Task } from "../tasks";
-import { appendTaskToPanel } from '..';
+import { appendTaskToPanel } from '../panels';
 
-export const modal = document.querySelector('.tasksModal');
+export const modal = document.querySelector('.modal');
 let subtaskList = [];
 
 export const initModal = () => {

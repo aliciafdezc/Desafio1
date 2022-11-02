@@ -1,0 +1,68 @@
+@mixin tasks($theme, $generalColors) {
+     
+    .taskContainer {
+        background: white;
+        border-radius:15px;
+        margin-bottom: 1rem;
+        z-index: 30;  
+
+        img { border-radius: 15px 15px 0 0; }
+        .content {
+            padding: 1.8rem 2rem;
+                
+            .tagsContainer span {
+                padding: .5rem 1rem;
+                font-size: 1.2rem;
+                border-radius: 34px;
+                color:white;
+                &.low {
+                    background-color: map.get($generalColors, "priorityLow");
+                }
+                &.medium {
+                    background-color: map.get($generalColors, "priorityMedium");
+                }
+                &.high { 
+                    background-color: map.get($generalColors, "priorityHigh");
+                }
+            } 
+
+            .iconsContainer i {
+                font-size: 1.8rem;
+                color: map.get($generalColors, "tertiary");
+                padding: .6rem 0 0 .7rem;
+                &:hover {
+                    color: map.get($generalColors, "priorityHigh");
+                }
+            }
+
+            .taskName {
+                margin-top: 4rem;
+                width: 100%;
+                margin-bottom: 1rem;
+                .line {
+                    background-color: map.get($theme, "accentDark");
+                    height: .2rem;          
+                }
+            }
+
+            .subtasksDropDown {  
+                width: 6.5rem;
+                background-color: map.get($theme, "accentDark");
+                padding: .2rem 1.5rem;
+                font-size: 1.2rem;
+                border-radius: 34px;
+                color: map.get($generalColors, "fontColorLight");
+                margin: 0 1.5rem .6rem 0;
+                i { margin-right: .5rem; }
+            }
+
+            .subtasksContainer {
+                display: none;
+                line-height: 0;
+                &.visible { display: block; }
+                i { margin: .5rem 1rem 0 .5em; }
+            }
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
-import { panelList } from '../..';
-import { clickedPanel } from '..';
+import { panelList } from './../..';
+import { clickedPanel } from './../panels';
 
 export function createTaskHtml(task) {
     let taskHtml = `<div class="taskContainer" data-id="${(task.id)}">
@@ -15,7 +15,6 @@ export function createTaskHtml(task) {
     
     taskHtml += `</div>
                     <div class="iconsContainer u-pull-right">
-                        <i class="edit fa fa-pencil-square-o"></i>
                         <i class="delete fa fa-times-circle"></i>
                     </div>
 

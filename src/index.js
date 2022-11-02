@@ -1,10 +1,10 @@
 import './styles.css';
 
 import { initChangeTheme } from './js/general';
-import { initMenus } from './header/header';
-import { PanelList, createPanel, addDropEvents } from './panels';
+import { initMenus } from './js/header';
+import { PanelList, createPanel, addDropEvents } from './js/panels';
 /* import { TasksList } from './panels/tasks'; */
-import { initModal } from './panels/tasksModal/modalLogic'
+import { initModal } from './js/modal/modalLogic'
 
 export const panelList = new PanelList();
 /* export const tasksList = new TasksList(); */

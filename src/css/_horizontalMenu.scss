@@ -1,0 +1,67 @@
+@mixin horizontalMenu($theme, $generalColors) {
+    nav.horizontalMenu {
+        line-height: 0;
+        color: map.get($generalColors, "fontColorLight");
+
+        i {
+            font-size: 2rem;
+            padding: 1em 0 1em 1em;
+        }
+
+        .projectListContainer {
+            height: 100%;
+            padding: 0 2rem 0 2rem;
+
+            ul.projectList {
+                display: flow-root;
+                margin: 0;
+
+                li {
+                    float: left;
+                    list-style: none;
+                    cursor: pointer;
+                    color: map.get($generalColors, "fontColorLight");
+                }
+            }
+        }
+    }
+
+    &.theme.dark nav.horizontalMenu {
+        background-color: map.get($theme, "accentLight");
+
+        li {
+            padding: 2em 1.5em;
+
+            &.current {
+                background-color: map.get($theme, "primary");
+            }
+
+            &:hover {
+                background-color: map.get($theme, "accentDark");
+            }
+        }
+    }
+
+    &.theme.light nav.horizontalMenu {
+        background-color: map.get($theme, "accentLight");
+
+        li {
+            padding: 1.2em 1.5em;
+            border: map.get($theme, "accentDark") 2px solid;
+            background-color: map.get($theme, "accentDark");
+            margin: 1rem .5rem 0 0;
+            border-radius: 10px;
+
+            &.current {
+                color: map.get($generalColors, "fontColorMedium");
+                border-color: map.get($theme, "primary");
+                background-color: map.get($theme, "primary");
+            }
+
+            &:hover {
+                background-color: map.get($theme, "accentLight");
+            }
+        }
+    }
+
+}
