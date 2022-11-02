@@ -27,7 +27,7 @@ export const createPanel = (panel) => {
 
 panelsContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) {
-        const modal = document.querySelector('.tasksModal');
+        const modal = document.querySelector('.modal');
         modal.classList.add('visible');
         modal.querySelector('.modalBottom').classList.add('addTask');
         clickedPanel = e.target.closest('.panel');

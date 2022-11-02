@@ -1,6 +1,6 @@
 import { panelList } from './../..';
 import { clickedPanel } from './../panels';
-import { modal, setModal } from '../tasksModal/modalLogic';
+import { modal, setModal } from '../modal/modalLogic';
 
 export function createTaskHtml(task) {
     let taskHtml = `<div class="taskContainer" data-id="${(task.id)}">
