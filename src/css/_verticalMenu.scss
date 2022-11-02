@@ -1,0 +1,17 @@
+@mixin verticalMenu($theme, $generalColors) {
+    nav.verticalMenu {
+        height: 100%;
+        background-color: map.get($theme, "accentLight");
+        color: map.get($generalColors, "fontColorLight");
+        ul li {
+            padding: 2.5rem 4rem;
+            &:hover {
+                background-color: map.get($theme, "accentDark");
+            }
+        }
+        .addProject {
+            padding: 2.5rem 4rem;
+            font-size: 2rem;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 @use "sass:map";
 @import './css/css-skeleton/normalize', './css/css-skeleton/skeleton', './css/header',
-        './css/footer', './css/horizontalMenu', './css/panels', './css/tasks', './css/modal';
+        './css/footer', './css/horizontalMenu', './css/panels', './css/tasks', './css/modal',
+        './css/verticalMenu';
 
 
 @media (max-width: 750px) {
@@ -112,6 +113,8 @@ body {
         @include panels($lightTheme, $generalColors);
         @include tasks($lightTheme, $generalColors);
         @include modal($lightTheme, $generalColors);
+        @include verticalMenu($lightTheme, $generalColors);
+        
     }
     
     &.theme.dark {
@@ -123,6 +126,7 @@ body {
         @include panels($darkTheme, $generalColors);
         @include tasks($darkTheme, $generalColors);
         @include modal($darkTheme, $generalColors);
+        @include verticalMenu($darkTheme, $generalColors);
     }
 }
 

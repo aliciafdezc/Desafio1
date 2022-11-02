@@ -1617,6 +1617,21 @@ body.theme.light .modal .modalContainer .modalBottom i {
 body.theme.light .modal .modalContainer .modalBottom:hover {
   background-color: #a19fa1;
 }
+body.theme.light nav.verticalMenu {
+  height: 100%;
+  background-color: #bababa;
+  color: #ffffff;
+}
+body.theme.light nav.verticalMenu ul li {
+  padding: 2.5rem 4rem;
+}
+body.theme.light nav.verticalMenu ul li:hover {
+  background-color: #a19fa1;
+}
+body.theme.light nav.verticalMenu .addProject {
+  padding: 2.5rem 4rem;
+  font-size: 2rem;
+}
 body.theme.dark {
   font-family: fontDark;
   background-color: #a09d9d;
@@ -2183,4 +2198,19 @@ body.theme.dark .modal .modalContainer .modalBottom i {
 }
 body.theme.dark .modal .modalContainer .modalBottom:hover {
   background-color: #111010;
+}
+body.theme.dark nav.verticalMenu {
+  height: 100%;
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+body.theme.dark nav.verticalMenu ul li {
+  padding: 2.5rem 4rem;
+}
+body.theme.dark nav.verticalMenu ul li:hover {
+  background-color: #111010;
+}
+body.theme.dark nav.verticalMenu .addProject {
+  padding: 2.5rem 4rem;
+  font-size: 2rem;
 }/*# sourceMappingURL=styles.css.map */
