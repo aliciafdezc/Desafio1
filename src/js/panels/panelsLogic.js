@@ -27,14 +27,17 @@ export const createPanel = (panel) => {
 
 panelsContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) {
-        document.querySelector('.modal').classList.add('visible');
+        const modal = document.querySelector('.tasksModal');
+        modal.classList.add('visible');
+        modal.querySelector('.modalBottom').classList.add('addTask');
         clickedPanel = e.target.closest('.panel');
     }   
 });
 
 
 export const appendTaskToPanel = (task) => {
-    panelList.panels.find(element => element.id == clickedPanel.getAttribute('data-id')).addTask(task);
+    const panel = panelList.panels.find(element => element.id == clickedPanel.getAttribute('data-id'));
+    panel.addTask(task);
     clickedPanel.querySelector('.tasks').append(createTaskHtml(task));
     addEvents(clickedPanel.querySelector('.tasks').lastChild);
 }
@@ -47,7 +50,6 @@ export const addDropEvents = () => {
         p.addEventListener('drop', drop);
         p.addEventListener('dragleave', dragLeave);
     });
-    
 }
 
 const dragEnter = (e) => {
@@ -68,7 +70,6 @@ const dragLeave = (e) => {
 const drop = (e) => {
     e.preventDefault();
     e.stopPropagation();
-
     
     const id = e.dataTransfer.getData('text/plain');
     const draggable = document.querySelector('[data-id="' + id + '"]');
