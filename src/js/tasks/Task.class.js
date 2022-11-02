@@ -5,7 +5,7 @@ export class Task {
     static fromJSON( { subtasks, name, img, label, priority, id } ) {
         const task = new Task(subtasks, name, img, label, priority);
         task.id = id;
-
+        task.loadLocalStorage();
         return task;
     }
 
@@ -16,7 +16,7 @@ export class Task {
         this.subtasks = subtasks;
         this.priority = priority;
         this.id = new Date().getTime();
-        this.loadLocalStorage();
+        
     }
 
     emptyList() {
@@ -65,5 +65,6 @@ export class Task {
                         : [  ];
 
         this.subtasks = this.subtasks.map( Subtask.fromJSON );
+        
     }
 }

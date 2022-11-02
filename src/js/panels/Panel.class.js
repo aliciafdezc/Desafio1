@@ -4,7 +4,7 @@ export class Panel {
 
     static fromJSON( {id, name, taskList} ) { 
         const panel = new Panel(taskList, name, id);
-
+        panel.loadLocalStorage();
         return panel;
     }
 
@@ -12,7 +12,7 @@ export class Panel {
         this.taskList = taskList;
         this.name = name;
         this.id = id;
-        this.loadLocalStorage();
+       
     }
 
     addTask(task) {
@@ -46,6 +46,7 @@ export class Panel {
                         : [  ];
 
         this.taskList = this.taskList.map( Task.fromJSON );
+        console.log (this.taskList);
     }
 }
 

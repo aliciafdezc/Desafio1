@@ -44,7 +44,6 @@ export const initModal = () => {
             const panel = clickedTaskHtml.closest('.panel');
             panelList.panels.find(p => p.id == panel.getAttribute('data-id')).updateTask(clickedTask);
             resetModal();
-            panelList.save();
         }
     });
 }
