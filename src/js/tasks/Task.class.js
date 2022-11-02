@@ -1,7 +1,10 @@
+import { Subtask } from '.';
+
 export class Task {
 
-    static fromJSON( {} ) {
-        const task = new Task();
+    static fromJSON( { subtasks, name, img, label, priority, id } ) {
+        const task = new Task(subtasks, name, img, label, priority);
+        task.id = id;
 
         return task;
     }
@@ -13,6 +16,7 @@ export class Task {
         this.subtasks = subtasks;
         this.priority = priority;
         this.id = new Date().getTime();
+        this.loadLocalStorage();
     }
 
     emptyList() {
@@ -53,5 +57,13 @@ export class Task {
     delete(id) {
         this.subtasks = this.subtasks.filter( subtask => subtask.id != id );
 
+    }
+
+    loadLocalStorage() {
+        this.subtasks = (localStorage.getItem('subtask')) 
+                        ? JSON.parse(localStorage.getItem('subtask'))
+                        : [  ];
+
+        this.subtasks = this.subtasks.map( Subtask.fromJSON );
     }
 }

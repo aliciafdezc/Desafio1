@@ -1,9 +1,10 @@
+import { Task } from '../tasks';
+
 export class Panel {
 
-    static fromJSON( {id, name, taskList} ) {
-        const panel = new Panel(taskList, name);
-        panel.id = id;
-        
+    static fromJSON( {id, name, taskList} ) { 
+        const panel = new Panel(taskList, name, id);
+
         return panel;
     }
 
@@ -11,6 +12,7 @@ export class Panel {
         this.taskList = taskList;
         this.name = name;
         this.id = id;
+        this.loadLocalStorage();
     }
 
     addTask(task) {
@@ -33,16 +35,17 @@ export class Panel {
     }
 
     saveLocalStorage() {
+        localStorage.setItem('task', JSON.stringify(this.taskList));
         localStorage.setItem('panel' + this.id, JSON.stringify(this));
     }
 
 
-    /* loadLocalStorage() {
-        this = (localStorage.getItem('panel')) 
-                        ? JSON.parse(localStorage.getItem('panel'))
+    loadLocalStorage() {
+        this.taskList = (localStorage.getItem('task')) 
+                        ? JSON.parse(localStorage.getItem('task'))
                         : [  ];
 
-        this = this.map( Panel.fromJSON );
-    } */
+        this.taskList = this.taskList.map( Task.fromJSON );
+    }
 }
 

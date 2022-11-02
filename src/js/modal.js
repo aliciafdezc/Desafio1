@@ -1,6 +1,6 @@
 /* import { tasksList } from "../.."; */
 import { Subtask, Task, editTaskHtml, addCheck } from "./tasks";
-import { appendTaskToPanel, PanelList } from './panels';
+import { appendTaskToPanel } from './panels';
 import { panelList } from "..";
 
 export const modal = document.querySelector('.modal');
@@ -14,17 +14,17 @@ export const initModal = () => {
         if (e.target.parentNode.classList.contains('close')) {
             modal.classList.remove('visible');
             resetModal();
-        } //ADD SUBTASK
+        } // ADD SUBTASK
         else if (e.target.classList.contains('addSubtask') || e.target.parentNode.classList.contains('addSubtask')) {
             addSubtask();
-        } //ADD TASK
+        } // ADD TASK
         else if (e.target.classList.contains('addTask') || e.target.parentNode.classList.contains('addTask')) {
             let task = createTask();
             modal.classList.remove('visible');
             modal.querySelector('.modalBottom').classList.remove('addTask');
             resetModal();
             appendTaskToPanel(task);
-        } //SAVE EDITED TASK
+        } // SAVE EDITED TASK
         else if (e.target.classList.contains('saveTask') || e.target.parentNode.classList.contains('saveTask')) {
             modal.classList.remove('visible');
             modal.querySelector('.modalBottom').classList.remove('saveTask');
@@ -64,7 +64,6 @@ const selectTaskElements = () => {
 const createTask = () => {
     const elements = selectTaskElements();
     const task = new Task(subtaskList, elements['taskName'], elements['imgUrl'], elements['label'], elements['priority']);
-    /* tasksList.addTask(task); *///may not be necessary
 
     return task;
 }
